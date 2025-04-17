@@ -2,95 +2,68 @@
 
 export const books = [
     {
-      title: "The Silent Forest",
-      slug: "the-silent-forest",
-      spineColor: "#2E5A88",
+      title: "Booksellers of Kabul",
+      slug: "the-booksellers-of-kabul",
+      spineColor: "#6cbad8",
       textColor: "#FFFFFF",
-      coverImage: "https://m.media-amazon.com/images/I/61aKbyBIZFL.jpg",
-      author: "Eleanor Marsh",
+      coverImage: "https://m.media-amazon.com/images/I/61KvqqXRXKL._SL1500_.jpg",
+      author: "Åsne Seierstad",
       description: "A haunting tale of survival in a world where silence is the only safety."
     },
     {
-      title: "Quantum Horizons",
-      slug: "quantum-horizons",
-      spineColor: "#541388",
+      title: "Shoe Dog",
+      slug: "shoe-dog",
+      spineColor: "#0c191e",
       textColor: "#F1E9DA",
-      coverImage: "https://m.media-amazon.com/images/I/61aKbyBIZFL.jpg",
-      author: "Dr. Marcus Chen",
-      description: "An exploration of the cutting edge of quantum physics and its implications for humanity's future."
+      coverImage: "https://m.media-amazon.com/images/I/81lxD2yoNRL._SL1500_.jpg",
+      author: "Phil Knight",
+      description: "A memoir by the co-founder of Nike, detailing the company's early days and struggles."
     },
     {
-      title: "Midnight in Cairo",
-      slug: "midnight-in-cairo",
-      spineColor: "#D62828",
+      title: "The Alchemist",
+      slug: "the-alchemist",
+      spineColor: "#f86b29",
       textColor: "#F5F3E7",
-      coverImage: "https://m.media-amazon.com/images/I/61aKbyBIZFL.jpg",
-      author: "Amira Hassan",
-      description: "A mystery set in 1920s Egypt, where ancient secrets and modern politics collide."
+      coverImage: "https://m.media-amazon.com/images/I/81ioPZFMeUL._SL1500_.jpg",
+      author: "Paulo Coelho",
+      description: "A philosophical tale about following your dreams and listening to your heart."
     },
     {
-      title: "The Last Algorithm",
-      slug: "the-last-algorithm",
-      spineColor: "#073B4C",
-      textColor: "#89D2DC",
-      coverImage: "https://m.media-amazon.com/images/I/61aKbyBIZFL.jpg",
-      author: "Soren Nakamura",
-      description: "When AI begins to evolve beyond human understanding, one programmer holds the key to communication."
+      title: "The Prophet",
+      slug: "the-prophet",
+      spineColor: "#f7d00c",
+      textColor: "#6a570d",
+      coverImage: "https://m.media-amazon.com/images/I/61+8wwQ2JsL._SL1200_.jpg",
+      author: "Khalil Gibran",
+      description: "A collection of poetic essays covering love, marriage, work, and freedom."
     },
     {
-      title: "Gardens of Memory",
-      slug: "gardens-of-memory",
-      spineColor: "#386641",
-      textColor: "#F1FAEE",
-      coverImage: "https://m.media-amazon.com/images/I/61aKbyBIZFL.jpg",
-      author: "Lucia Fernandez",
-      description: "A multigenerational family saga spanning from Cuba to Miami, exploring themes of memory and belonging."
+      title: "Men Without Women",
+      slug: "men-without-women",
+      spineColor: "#c1b58e",
+      textColor: "#423e32",
+      coverImage: "https://m.media-amazon.com/images/I/61jE8ravkbL._SL1500_.jpg",
+      author: "Haruki Murakami",
+      description: "A collection of short stories exploring themes of loneliness and isolation."
     },
     {
-      title: "The Stone Circle",
-      slug: "the-stone-circle",
-      spineColor: "#5F4B32",
-      textColor: "#EAE0CC",
-      coverImage: "https://m.media-amazon.com/images/I/61aKbyBIZFL.jpg",
-      author: "Ian McAllister",
-      description: "An archaeological discovery in rural Scotland unearths both ancient artifacts and long-buried truths."
+      title: "The Secret History",
+      slug: "the-secret-history",
+      spineColor: "#25231d",
+      textColor: "#eee1ba",
+      coverImage: "https://m.media-amazon.com/images/I/71HcEbK3pEL._SL1500_.jpg",
+      author: "Donna Tartt",
+      description: "A collection of short stories exploring themes of loneliness and isolation."
     },
     {
-      title: "Neon Dreams",
-      slug: "neon-dreams",
-      spineColor: "#9D4EDD",
-      textColor: "#240046",
-      coverImage: "https://m.media-amazon.com/images/I/61aKbyBIZFL.jpg",
-      author: "Jay Park",
-      description: "A cyberpunk adventure through a near-future Seoul where reality and virtuality have begun to merge."
+      title: "If Cats Disappeared from the World",
+      slug: "if-cats-disappeared-from-the-world",
+      spineColor: "#f5f3da",
+      textColor: "#474639",
+      coverImage: "https://m.media-amazon.com/images/I/713Q37iExNL._SL1500_.jpg",
+      author: "Genki Kawamura",
+      description: "A collection of short stories exploring themes of loneliness and isolation."
     },
-    {
-      title: "Beneath the Waves",
-      slug: "beneath-the-waves",
-      spineColor: "#0077B6",
-      textColor: "#CAF0F8",
-      coverImage: "https://m.media-amazon.com/images/I/61aKbyBIZFL.jpg",
-      author: "Marina Delgado",
-      description: "A marine biologist's discovery in the deepest part of the ocean changes our understanding of life itself."
-    },
-    {
-      title: "The Clockmaker's Daughter",
-      slug: "the-clockmakers-daughter",
-      spineColor: "#774936",
-      textColor: "#F8EDEB",
-      coverImage: "https://m.media-amazon.com/images/I/61aKbyBIZFL.jpg",
-      author: "Thomas Whitney",
-      description: "In Victorian London, a clockmaker creates an automaton so lifelike it begins to blur the line between creation and creator."
-    },
-    {
-      title: "Starlight Echoes",
-      slug: "starlight-echoes",
-      spineColor: "#03071E",
-      textColor: "#FFBA08",
-      coverImage: "https://m.media-amazon.com/images/I/61aKbyBIZFL.jpg",
-      author: "Zara Noor",
-      description: "A space opera spanning galaxies, where the discovery of ancient alien technology may hold the key to humanity's survival."
-    }
   ];
   
   export default books;

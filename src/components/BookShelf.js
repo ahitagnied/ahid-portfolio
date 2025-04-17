@@ -193,6 +193,7 @@ export function Bookshelf({ books }) {
                     transformOrigin: "right",
                     backgroundColor: book.spineColor,
                     color: book.textColor,
+                    marginTop: "-4px",
                     transform: `rotateY(${bookIndex === index ? "-60deg" : "0deg"})`,
                     transition: "all 500ms ease",
                     filter: "brightness(0.8) contrast(2)",
@@ -365,6 +366,17 @@ export function Bookshelf({ books }) {
             </div>
           </div>
         ))}
+        <p style={{
+          position: "relative",
+          bottom: "10px",
+          marginBottom: "0",
+          textAlign: "center",
+          fontSize: "14px",
+          color: "#666",
+          fontFamily: "Arial, sans-serif",
+        }}>
+          inspired by <a href="https://adammaj.com/reading" style={{textDecoration: "none", color: "black"}}>adam-maj</a>
+        </p>
       </div>
     )}
     </div>
