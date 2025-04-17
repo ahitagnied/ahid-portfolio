@@ -1,128 +1,279 @@
-import React, { useState } from 'react';
-import './BookShelf.css';
+import React, { useState, useRef, useEffect } from "react";
 
-const BookShelf = () => {
-  // State to track which book is currently selected
-  const [selectedBook, setSelectedBook] = useState(null);
+// no need for book type definition if we're not using typescript
+export function Bookshelf({ books }) {
+  const [bookIndex, setBookIndex] = useState(-1);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const [scrollDirection, setScrollDirection] = useState(null);
   
-  // Sample book data
-  const books = [
-    {
-      id: 1,
-      spine: "The 38 Letters from J.D. Rockel...",
-      color: "#3D1E1A",
-      textColor: "white"
-    },
-    {
-      id: 2,
-      spine: "The Tao of Charlie Munger",
-      color: "#E04E32",
-      textColor: "white"
-    },
-    {
-      id: 3,
-      spine: "Insanely Simple",
-      color: "#F2F2F2",
-      textColor: "#333"
-    },
-    {
-      id: 4,
-      spine: "Goddesses in Everywoman",
-      color: "#202020",
-      textColor: "white"
-    },
-    {
-      id: 5,
-      spine: "Finite and Infinite Games",
-      color: "#F2F2F2",
-      textColor: "#333"
-    },
-    {
-      id: 6,
-      spine: "King, Warrior, Magician, Lover",
-      color: "#264D63",
-      textColor: "white"
-    },
-    {
-      id: 7,
-      spine: "Civilization and its Discontents",
-      color: "#588A68",
-      textColor: "white"
-    }
-  ];
+  // refs for scrolling
+  const containerRef = useRef(null);
+  const scrollIntervalRef = useRef(null);
+  
+  // width and height constants
+  const width = 41.5;
+  const height = 220;
+  const spineWidth = `${width}px`;
+  const coverWidth = `${width * 4}px`;
+  const bookWidth = `${width * 5}px`;
+  const bookHeight = `${height}px`;
 
-  // Handle book click
-  const handleBookClick = (bookId) => {
-    if (selectedBook === bookId) {
-      setSelectedBook(null);
-    } else {
-      setSelectedBook(bookId);
+  // handle arrow hover for scrolling
+  const startScroll = (direction) => {
+    if (scrollIntervalRef.current) return;
+    
+    setScrollDirection(direction);
+    setIsScrolling(true);
+    
+    scrollIntervalRef.current = setInterval(() => {
+      if (containerRef.current) {
+        const scrollAmount = direction === 'left' ? -3 : 3;
+        containerRef.current.scrollLeft += scrollAmount;
+      }
+    }, 16); // ~60fps
+  };
+  
+  const stopScroll = () => {
+    if (scrollIntervalRef.current) {
+      clearInterval(scrollIntervalRef.current);
+      scrollIntervalRef.current = null;
     }
+    setIsScrolling(false);
+    setScrollDirection(null);
   };
 
+  // cleanup interval on unmount
+  useEffect(() => {
+    return () => {
+      if (scrollIntervalRef.current) {
+        clearInterval(scrollIntervalRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="book-display-container">
-      <h2 className="book-display-title">Interactive Book Display</h2>
-      <p className="book-display-instruction">Click on any book spine to see its cover. Click again to return to the shelf view.</p>
-      
-      <div className="book-shelf">
-        <div className="books-row">
-          {books.map((book) => {
-            // Is this the selected book?
-            const isSelected = selectedBook === book.id;
-            
-            return (
-              <div
-                key={book.id}
-                className="book-spine-container"
+    <div style={{ 
+      position: "relative", 
+      display: "flex",
+      justifyContent: "center",
+      width: "50%", 
+      margin: "0 auto" 
+    }}>
+      {/* svg filter for paper texture */}
+      <svg style={{ position: "absolute", inset: 0, visibility: "hidden" }}>
+        <defs>
+          <filter id="paper" x="0%" y="0%" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="8" result="noise" />
+            <feDiffuseLighting in="noise" lightingColor="white" surfaceScale="1" result="diffLight">
+              <feDistantLight azimuth="45" elevation="35" />
+            </feDiffuseLighting>
+          </filter>
+        </defs>
+      </svg>
+
+      {/* bookshelf container with left/right arrows */}
+      <div style={{ 
+        position: "relative", 
+        display: "flex", 
+        alignItems: "center",
+        width: "600px", // Fixed preferred width
+        minWidth: "400px", // Minimum width before it starts shrinking
+        maxWidth: "100%"  // Allow scaling down on very small screens
+      }}>
+        {/* left arrow */}
+        <div 
+          onMouseEnter={() => startScroll('left')}
+          onMouseLeave={stopScroll}
+          onTouchStart={() => startScroll('left')}
+          onTouchEnd={stopScroll}
+          style={{
+            cursor: "pointer",
+            width: "30px",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: "24px",
+            userSelect: "none",
+            zIndex: 10,
+            minWidth: "30px",
+            opacity: scrollDirection === 'left' ? 0.8 : 0.5,
+          }}
+        >
+          ‹
+        </div>
+
+        {/* scrollable book container */}
+        <div
+          ref={containerRef}
+          style={{
+            display: "flex",
+            overflowX: "auto",
+            scrollBehavior: isScrolling ? "auto" : "smooth",
+            scrollbarWidth: "none", // firefox
+            msOverflowStyle: "none", // ie
+            WebkitOverflowScrolling: "touch",
+            padding: "20px 0",
+            flex: 1,
+          }}
+        >
+          <style>
+            {`
+            /* hide scrollbar for chrome, safari and opera */
+            div::-webkit-scrollbar {
+              display: none;
+            }
+            `}
+          </style>
+          
+          {/* books */}
+          <div style={{ 
+            display: "flex", 
+            gap: "10px",
+            padding: "0 40px",
+          }}>
+            {books.map((book, index) => (
+              <button
+                key={book.title}
+                onClick={() => setBookIndex(index === bookIndex ? -1 : index)}
                 style={{
-                  width: isSelected ? '0px' : '60px',
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  outline: "none",
+                  flexShrink: 0,
+                  width: bookIndex === index ? bookWidth : spineWidth,
+                  perspective: "1000px",
+                  WebkitPerspective: "1000px",
+                  transition: "all 500ms ease",
+                  border: "none",
+                  background: "transparent",
+                  padding: 0,
                 }}
               >
-                {/* Book spine - only shown when not selected */}
-                {!isSelected && (
-                  <div
-                    className="book-spine"
+                {/* book spine */}
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    justifyContent: "center",
+                    width: spineWidth,
+                    height: bookHeight,
+                    flexShrink: 0,
+                    transformOrigin: "right",
+                    backgroundColor: book.spineColor,
+                    color: book.textColor,
+                    transform: `rotateY(${bookIndex === index ? "-60deg" : "0deg"})`,
+                    transition: "all 500ms ease",
+                    filter: "brightness(0.8) contrast(2)",
+                    transformStyle: "preserve-3d",
+                  }}
+                >
+                  <span
                     style={{
-                      backgroundColor: book.color,
+                      pointerEvents: "none",
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      height: bookHeight,
+                      width: spineWidth,
+                      opacity: 0.4,
+                      filter: "url(#paper)",
                     }}
-                    onClick={() => handleBookClick(book.id)}
+                  />
+                  <h2
+                    style={{
+                      marginTop: "12px",
+                      fontSize: "12px",
+                      fontFamily: `"DM Sans", sans-serif`,
+                      writingMode: "vertical-rl",
+                      userSelect: "none",
+                      textOverflow: "ellipsis",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      maxHeight: `${height - 24}px`,
+                    }}
                   >
-                    <div 
-                      className="spine-text"
-                      style={{ color: book.textColor }}
-                    >
-                      {book.spine}
-                    </div>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+                    {book.title}
+                  </h2>
+                </div>
+                
+                {/* book cover */}
+                <div
+                  style={{
+                    position: "relative",
+                    flexShrink: 0,
+                    overflow: "hidden",
+                    transformOrigin: "left",
+                    transform: `rotateY(${bookIndex === index ? "30deg" : "88.8deg"})`,
+                    transition: "all 500ms ease",
+                    filter: "brightness(0.8) contrast(2)",
+                    transformStyle: "preserve-3d",
+                  }}
+                >
+                  <span
+                    style={{
+                      pointerEvents: "none",
+                      position: "absolute",
+                      top: 0,
+                      right: 0,
+                      height: bookHeight,
+                      width: coverWidth,
+                      opacity: 0.4,
+                      filter: "url(#paper)",
+                    }}
+                  />
+                  <span
+                    style={{
+                      pointerEvents: "none",
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      height: bookHeight,
+                      width: coverWidth,
+                      background: `linear-gradient(to right, rgba(255,255,255,0) 2px, rgba(255,255,255,0.5) 3px, rgba(255,255,255,0.25) 4px, rgba(255,255,255,0.25) 6px, transparent 7px, transparent 9px, rgba(255,255,255,0.25) 9px, transparent 12px)`,
+                    }}
+                  />
+                  <img
+                    src={book.coverImage}
+                    alt={book.title}
+                    width={coverWidth}
+                    height={bookHeight}
+                    style={{
+                      transition: "all 500ms ease",
+                    }}
+                  />
+                </div>
+              </button>
+            ))}
+          </div>
         </div>
         
-        {/* Selected book cover */}
-        {selectedBook !== null && (
-          <div 
-            className="book-cover"
-            onClick={() => handleBookClick(selectedBook)}
-          >
-            <div className="cover-content">
-              <div className="book-title">
-                {books.find(b => b.id === selectedBook).spine.split(' ').slice(0, 3).join(' ')}
-              </div>
-              <div className="cover-image">
-                Cover Art
-              </div>
-              <div className="author-name">
-                Author Name
-              </div>
-            </div>
-          </div>
-        )}
+        {/* right arrow */}
+        <div 
+          onMouseEnter={() => startScroll('right')}
+          onMouseLeave={stopScroll}
+          onTouchStart={() => startScroll('right')}
+          onTouchEnd={stopScroll}
+          style={{
+            cursor: "pointer",
+            width: "30px",
+            height: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: "24px",
+            userSelect: "none",
+            minWidth: "30px",
+            zIndex: 10,
+            opacity: scrollDirection === 'right' ? 0.8 : 0.5,
+          }}
+        >
+          ›
+        </div>
       </div>
     </div>
   );
-};
+}
 
-export default BookShelf;
+export default Bookshelf;
