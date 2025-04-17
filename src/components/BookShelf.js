@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 
-// no need for book type definition if we're not using typescript
 export function Bookshelf({ books }) {
   const [bookIndex, setBookIndex] = useState(-1);
   const [isScrolling, setIsScrolling] = useState(false);
@@ -303,29 +302,70 @@ export function Bookshelf({ books }) {
         </div>
       </div>
     </div>
-      {selectedBook && (
-        <div style={{
-          marginTop: "30px",
-          maxWidth: "500px",
-          margin: "50px auto 0",
-          padding: "0 10px",
-          fontFamily: "times new roman",
-        }}>
-          <h2 style={{ fontSize: "24px", marginBottom: "10px"}}>
-            {selectedBook.title}
-          </h2>
-          
-          {selectedBook.author && (
-            <p style={{ color: "#666", marginBottom: "10px" }}>
-              By: {selectedBook.author}
-            </p>
-          )}
-          
-          <p style={{ lineHeight: "1.2" }}>
-            {selectedBook.description}
+        {selectedBook ? (
+      <div style={{
+        marginTop: "30px",
+        maxWidth: "500px",
+        margin: "50px auto 0",
+        padding: "0 10px",
+        fontFamily: "times new roman",
+      }}>
+        <h2 style={{ fontSize: "24px", marginBottom: "10px"}}> {selectedBook.title} </h2>
+        
+        {selectedBook.author && (
+          <p style={{ color: "#666", marginBottom: "10px" }}>
+            By: {selectedBook.author}
           </p>
-        </div>
-      )}
+        )}
+        
+        <p style={{ lineHeight: "1.2", justifyContent: "left" }}>
+          {selectedBook.description}
+        </p>
+      </div>
+    ) : (
+      <div style={{
+        marginTop: "30px",
+        maxWidth: "650px",
+        margin: "50px auto 0",
+        padding: "0 20px",
+        fontFamily: "times new roman",
+      }}>
+        {books.map((book) => (
+          <div key={book.title} style={{ 
+            marginBottom: "50px", 
+            display: "flex",
+            gap: "20px",
+            alignItems: "flex-start"
+          }}>
+            <img 
+              src={book.coverImage} 
+              alt={book.title}
+              style={{
+                width: "120px",
+                height: "180px",
+                objectFit: "cover",
+                boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
+              }}
+            />
+            <div>
+              <h2 style={{ fontSize: "24px", marginBottom: "10px", marginTop: "0", textAlign: "left"}}>
+                {book.title}
+              </h2>
+              
+              {book.author && (
+                <p style={{ color: "#666", marginBottom: "10px", textAlign: "left" }}>
+                  By: {book.author}
+                </p>
+              )}
+              
+              <p style={{ lineHeight: "1.4", textAlign: "left" }}>
+                {book.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
     </div>
   );
 }
