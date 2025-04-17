@@ -7,7 +7,6 @@ export function Bookshelf({ books }) {
   const [scrollDirection, setScrollDirection] = useState(null);
   const [selectedBook, setSelectedBook] = useState(null);
 
-
   // refs for scrolling
   const containerRef = useRef(null);
   const scrollIntervalRef = useRef(null);
@@ -35,6 +34,25 @@ export function Bookshelf({ books }) {
     }, 16); // ~60fps
   };
   
+  const scrollBookToCenter = (index) => {
+    if (containerRef.current) {
+      const containerWidth = containerRef.current.offsetWidth;
+      const bookWidth = width + 10; // book width + gap
+      
+      // calculate where this book is positioned
+      const bookPosition = (bookWidth * index) + 40; // Add padding offset
+      
+      // center it in the container
+      const scrollPosition = bookPosition - (containerWidth / 2) + (width / 2);
+      
+      // apply the scroll
+      containerRef.current.scrollTo({
+        left: Math.max(0, scrollPosition),
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const stopScroll = () => {
     if (scrollIntervalRef.current) {
       clearInterval(scrollIntervalRef.current);
@@ -141,10 +159,11 @@ export function Bookshelf({ books }) {
                 onClick={() => {
                   if (index === bookIndex) {
                     setBookIndex(-1);
-                    setSelectedBook(null); // hide details when closing a book
+                    setSelectedBook(null);
                   } else {
                     setBookIndex(index);
-                    setSelectedBook(book); // show details when opening a book
+                    setSelectedBook(book);
+                    scrollBookToCenter(index);
                   }
                 }}
                 style={{
@@ -287,10 +306,10 @@ export function Bookshelf({ books }) {
       {selectedBook && (
         <div style={{
           marginTop: "30px",
-          maxWidth: "700px",
+          maxWidth: "500px",
           margin: "50px auto 0",
-          padding: "0 20px",
-          fontFamily: "sans-serif",
+          padding: "0 10px",
+          fontFamily: "times new roman",
         }}>
           <h2 style={{ fontSize: "24px", marginBottom: "10px"}}>
             {selectedBook.title}
@@ -302,7 +321,7 @@ export function Bookshelf({ books }) {
             </p>
           )}
           
-          <p style={{ lineHeight: "1.6" }}>
+          <p style={{ lineHeight: "1.2" }}>
             {selectedBook.description}
           </p>
         </div>
