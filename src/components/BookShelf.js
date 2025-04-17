@@ -5,7 +5,9 @@ export function Bookshelf({ books }) {
   const [bookIndex, setBookIndex] = useState(-1);
   const [isScrolling, setIsScrolling] = useState(false);
   const [scrollDirection, setScrollDirection] = useState(null);
-  
+  const [selectedBook, setSelectedBook] = useState(null);
+
+
   // refs for scrolling
   const containerRef = useRef(null);
   const scrollIntervalRef = useRef(null);
@@ -52,6 +54,7 @@ export function Bookshelf({ books }) {
   }, []);
 
   return (
+    <div>
     <div style={{ 
       position: "relative", 
       display: "flex",
@@ -135,7 +138,15 @@ export function Bookshelf({ books }) {
             {books.map((book, index) => (
               <button
                 key={book.title}
-                onClick={() => setBookIndex(index === bookIndex ? -1 : index)}
+                onClick={() => {
+                  if (index === bookIndex) {
+                    setBookIndex(-1);
+                    setSelectedBook(null); // hide details when closing a book
+                  } else {
+                    setBookIndex(index);
+                    setSelectedBook(book); // show details when opening a book
+                  }
+                }}
                 style={{
                   display: "flex",
                   flexDirection: "row",
@@ -272,6 +283,30 @@ export function Bookshelf({ books }) {
           ›
         </div>
       </div>
+    </div>
+      {selectedBook && (
+        <div style={{
+          marginTop: "30px",
+          maxWidth: "700px",
+          margin: "50px auto 0",
+          padding: "0 20px",
+          fontFamily: "sans-serif",
+        }}>
+          <h2 style={{ fontSize: "24px", marginBottom: "10px"}}>
+            {selectedBook.title}
+          </h2>
+          
+          {selectedBook.author && (
+            <p style={{ color: "#666", marginBottom: "10px" }}>
+              By: {selectedBook.author}
+            </p>
+          )}
+          
+          <p style={{ lineHeight: "1.6" }}>
+            {selectedBook.description}
+          </p>
+        </div>
+      )}
     </div>
   );
 }
