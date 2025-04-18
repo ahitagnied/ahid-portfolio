@@ -5,7 +5,7 @@ import books from '../contents/Books';
 function Reading() {
   return (
     <div>
-      <Bookshelf books={books} />
+        <Bookshelf books={books} />
     </div>
   );
 }

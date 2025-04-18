@@ -1,14 +1,21 @@
+// src/App.js
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
 import Reading from './pages/Reading';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <main style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
-        <Reading />
-      </main>
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/reading" element={<Reading />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 
