@@ -165,7 +165,7 @@ function Navbar() {
           
           <div>
             <h3 style={{ 
-                fontSize: '16px', 
+                fontSize: '12px', 
                 fontWeight: 'bold', 
                 marginBottom: '15px',
             }}>

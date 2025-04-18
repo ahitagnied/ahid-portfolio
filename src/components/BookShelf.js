@@ -77,7 +77,7 @@ export function Bookshelf({ books }) {
       position: "relative", 
       display: "flex",
       justifyContent: "center",
-      width: "50%", 
+      width: "100%", 
       margin: "0 auto" 
     }}>
       {/* svg filter for paper texture */}
@@ -97,9 +97,9 @@ export function Bookshelf({ books }) {
         position: "relative", 
         display: "flex", 
         alignItems: "center",
-        width: "600px", // Fixed preferred width
-        minWidth: "400px", // Minimum width before it starts shrinking
-        maxWidth: "100%"  // Allow scaling down on very small screens
+        width: "600px", // fixed preferred width
+        minWidth: "400px", // minimum width before it starts shrinking
+        maxWidth: "100%"  // allow scaling down on very small screens
       }}>
         {/* left arrow */}
         <div 
