@@ -1,5 +1,5 @@
-// src/pages/Home.js
 import React from 'react';
+import banner from '../assets/banner.jpg'
 
 function Home() {
   return (
@@ -7,21 +7,33 @@ function Home() {
       maxWidth: '650px',
       margin: '0 auto',
       padding: '20px',
-      fontFamily: 'times new roman'
     }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '30px' }}>
-        Hello, I'm Ahi
-      </h1>
       
-      <div style={{ lineHeight: '1.6', fontSize: '18px' }}>
+      <div style={{ lineHeight: '1.2', fontSize: '16px', fontFamily: 'Lora' }}>
+        <img src={banner} style={{width: '100%', borderRadius: '20px'}} alt="Banner" />
         <p>
-          Welcome to my personal website. This is where I share my thoughts, projects, 
-          and interests. Feel free to explore the different sections.
+          Hello! I am Ahitagni (or Ahi), I am an undergrad at Rice University pursuing a dual degree in EE and CS. 
+          I am a researcher at the <a style={{textDecoration: 'none'}} href='https://computationalimaging.rice.edu/'>
+          Computational Imaging Group</a> working on diffusion models & control-nets for applicatiosn in video stabalisation.
+
+          <br/> <br/>
+
+          I am interested in AI, primarily CV and voice models. I like [writing, software, startups]. Enjoy watching 
+          movies and hiking. 
         </p>
         
+        <h4>Research</h4>
         <p>
-          You can find my reading list in the Reading section, my articles and 
-          essays in the Writing section, and some deeper explorations in the Deep Dives section.
+          I am interested in CV and Spatial Intelligence, and I am advised by <a style={{textDecoration: 'none'}} 
+          href='https://computationalimaging.rice.edu/team/ashok-veeraraghavan/'>Dr. Ashok Veeraraghavan</a>. Also exploring 
+          TTS and voice models for fun. 
+
+          <br/> <br/>
+
+          Previously, I have developed the <strong>world's smallest batteries</strong> (30 um) at the <a style={{textDecoration: 'none'}} 
+          href='https://www.media.mit.edu/groups/nano-cybernetic-biotrek/overview/'>MIT Media Lab</a>, researched novel Li/Na-ion batteries at 
+          the <a style={{textDecoration: 'none'}} href='https://ajayan.rice.edu/'>Ajayan Group</a>, and deviced a way to convert 
+          plastic waste to electrical energy at <a style={{textDecoration: 'none'}} href='https://iitg.irins.org/profile/128220'>IIT Guwahati.</a>
         </p>
       </div>
     </div>
