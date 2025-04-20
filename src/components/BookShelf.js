@@ -63,8 +63,9 @@ export function Bookshelf({ books }) {
 
   // cleanup interval on unmount
   useEffect(() => {
+    document.title = "Bookshelf | Ahitagni D";
+    
     return () => {
-      document.title = "Bookshelf | Ahitagni D";
       if (scrollIntervalRef.current) {
         clearInterval(scrollIntervalRef.current);
       }

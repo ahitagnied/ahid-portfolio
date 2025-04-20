@@ -2,11 +2,10 @@ import denali from '../assets/denali.png'
 import React, { useEffect } from 'react';
 
 function Home() {
-  // cleanup interval on unmount
   useEffect(() => {
-    return () => {
-      document.title = "Home | Ahitagni D";
-    };
+    document.title = "Home | Ahitagni D";
+
+    return () => {};
   }, []);
 
   return (
