@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from '../assets/banner.jpg'
+import denali from '../assets/denali.png'
 
 function Home() {
   return (
@@ -10,7 +10,7 @@ function Home() {
     }}>
       
       <div style={{ lineHeight: '1.2', fontSize: '16px', fontFamily: 'Lora' }}>
-        <img src={banner} style={{width: '100%', borderRadius: '20px', marginTop: '20px'}} alt="Banner" />
+        <img src={denali} style={{width: '100%', borderRadius: '20px', marginTop: '20px'}} alt="Banner" />
         <p>
           Hello! I am Ahitagni (or Ahi), I am an undergrad at Rice University pursuing a dual degree in EE and CS. 
           I am a researcher at the <a style={{textDecoration: 'none'}} href='https://computationalimaging.rice.edu/'>
