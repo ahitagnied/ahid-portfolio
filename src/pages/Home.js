@@ -1,7 +1,14 @@
-import React from 'react';
 import denali from '../assets/denali.png'
+import React, { useEffect } from 'react';
 
 function Home() {
+  // cleanup interval on unmount
+  useEffect(() => {
+    return () => {
+      document.title = "Home | Ahitagni D";
+    };
+  }, []);
+
   return (
     <div style={{
       maxWidth: '650px',
@@ -13,21 +20,16 @@ function Home() {
         <img src={denali} style={{width: '100%', borderRadius: '20px', marginTop: '20px'}} alt="Banner" />
         <p>
           Hello! I am Ahitagni (or Ahi), I am an undergrad at Rice University pursuing a dual degree in EE and CS. 
-          I am a researcher at the <a style={{textDecoration: 'none'}} href='https://computationalimaging.rice.edu/'>
-          Computational Imaging Group</a> working on diffusion models & control-nets for applicatiosn in video stabalisation.
-
-          <br/> <br/>
-
-          I am interested in AI, primarily CV and voice models. I like [writing, software, startups]. Enjoy watching 
-          movies and hiking. 
+          I like AI, software, and startups. Enjoy taking pictures and hiking. 
         </p>
         
         <h4>Research</h4>
         <p>
-          I am interested in CV and Spatial Intelligence, and I am advised by <a style={{textDecoration: 'none'}} 
-          href='https://computationalimaging.rice.edu/team/ashok-veeraraghavan/'>Dr. Ashok Veeraraghavan</a>. Also exploring 
+          I am interested in CV and Spatial Intelligence, and am a researcher at the <a style={{textDecoration: 'none'}} 
+          href='https://computationalimaging.rice.edu/'>Computational Imaging Group</a> working on on diffusion models & control-nets.
+          I am advised by <a style={{textDecoration: 'none'}} href='https://computationalimaging.rice.edu/team/ashok-veeraraghavan/'>
+          Dr. Ashok Veeraraghavan</a>. Also exploring 
           TTS and voice models for fun. 
-
           <br/> <br/>
 
           Previously, I have developed the <strong>world's smallest batteries</strong> (30 um) at the <a style={{textDecoration: 'none'}} 
