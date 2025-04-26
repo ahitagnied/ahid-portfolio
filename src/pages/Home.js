@@ -24,17 +24,17 @@ function Home() {
         
         <h4>Research</h4>
         <p>
-          I am interested in CV and Spatial Intelligence, and am a researcher at the <a style={{textDecoration: 'none'}} 
+          I am interested in CV and Spatial Intelligence, and am a researcher at the <a style={{textDecoration: 'none', color: "#0a507e"}} 
           href='https://computationalimaging.rice.edu/'>Computational Imaging Group</a> working on on diffusion models & control-nets.
-          I am advised by <a style={{textDecoration: 'none'}} href='https://computationalimaging.rice.edu/team/ashok-veeraraghavan/'>
+          I am advised by <a style={{textDecoration: 'none', color: "#0a507e"}} href='https://computationalimaging.rice.edu/team/ashok-veeraraghavan/'>
           Dr. Ashok Veeraraghavan</a>. Also exploring 
           TTS and voice models for fun. 
           <br/> <br/>
 
-          Previously, I have developed the <strong>world's smallest batteries</strong> (30 um) at the <a style={{textDecoration: 'none'}} 
+          Previously, I have developed the <strong>world's smallest batteries</strong> (30 um) at the <a style={{textDecoration: 'none', color: "#0a507e"}} 
           href='https://www.media.mit.edu/groups/nano-cybernetic-biotrek/overview/'>MIT Media Lab</a>, researched novel Li/Na-ion batteries at 
-          the <a style={{textDecoration: 'none'}} href='https://ajayan.rice.edu/'>Ajayan Group</a>, and deviced a way to convert 
-          plastic waste to electrical energy at <a style={{textDecoration: 'none'}} href='https://iitg.irins.org/profile/128220'>IIT Guwahati.</a>
+          the <a style={{textDecoration: 'none', color: "#0a507e"}} href='https://ajayan.rice.edu/'>Ajayan Group</a>, and deviced a way to convert 
+          plastic waste to electrical energy at <a style={{textDecoration: 'none', color: "#0a507e"}} href='https://iitg.irins.org/profile/128220'>IIT Guwahati.</a>
         </p>
       </div>
     </div>
