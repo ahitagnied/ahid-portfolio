@@ -8,7 +8,7 @@ export default function Contact({data}) {
       gridTemplateColumns: "1fr 1px 1fr",
       rowGap: "0px",
       columnGap: "10px",
-      maxWidth: "75%",
+      maxWidth: "80%",
       margin: "0 auto",
       paddingTop: "10px",
       fontFamily: "Lora",
