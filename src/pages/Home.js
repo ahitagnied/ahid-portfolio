@@ -1,5 +1,7 @@
 import denali from '../assets/denali.png'
 import React, { useEffect } from 'react';
+import Contact from "../components/Contact";
+import {data} from '../contents/ContactData';
 
 function Home() {
   useEffect(() => {
@@ -21,14 +23,17 @@ function Home() {
           Hello! I am Ahitagni (or Ahi), I am an undergrad at Rice University pursuing a dual degree in EE and CS. 
           I like AI, software, and startups. Enjoy taking pictures and hiking. 
         </p>
-        
+
+
+        {/* Contact and Teams Box*/}
+        <Contact data={data} />
+
+
         <h4>Research</h4>
         <p>
-          I am interested in CV and Spatial Intelligence, and am a researcher at the <a style={{textDecoration: 'none', color: "#0a507e"}} 
-          href='https://computationalimaging.rice.edu/'>Computational Imaging Group</a> working on on diffusion models & control-nets.
-          I am advised by <a style={{textDecoration: 'none', color: "#0a507e"}} href='https://computationalimaging.rice.edu/team/ashok-veeraraghavan/'>
-          Dr. Ashok Veeraraghavan</a>. Also exploring 
-          TTS and voice models for fun. 
+          I am interested in CV and Spatial Intelligence. I research diffusion models and contro-nets at the <a style={{textDecoration: 'none', color: "#0a507e"}} 
+          href='https://computationalimaging.rice.edu/'>Computational Imaging Group</a> with <a style={{textDecoration: 'none', color: "#0a507e"}} 
+          href='https://computationalimaging.rice.edu/team/ashok-veeraraghavan/'> Dr. Ashok Veeraraghavan</a>. Also exploring TTS and voice models for fun. 
           <br/> <br/>
 
           Previously, I have developed the <strong>world's smallest batteries</strong> (30 um) at the <a style={{textDecoration: 'none', color: "#0a507e"}} 
@@ -37,6 +42,8 @@ function Home() {
           plastic waste to electrical energy at <a style={{textDecoration: 'none', color: "#0a507e"}} href='https://iitg.irins.org/profile/128220'>IIT Guwahati.</a>
         </p>
       </div>
+
+
     </div>
   );
 }
