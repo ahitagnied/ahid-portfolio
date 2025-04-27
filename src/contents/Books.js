@@ -1,5 +1,3 @@
-// src/contents/books.js
-
 export const books = [
     {
       title: "Booksellers of Kabul",
