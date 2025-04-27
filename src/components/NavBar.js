@@ -5,18 +5,20 @@ function Navbar() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1110);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-
+  
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 1110);
     };
 
+    setIsMenuOpen(false);
+
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
-
+  }, [location.pathname]);
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
