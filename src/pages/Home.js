@@ -2,6 +2,8 @@ import denali from '../assets/denali.png'
 import React, { useEffect } from 'react';
 import Contact from "../components/Contact";
 import {data} from '../contents/ContactData';
+import {publist} from '../contents/PublicationList'
+import { PublicationList } from '../components/PublicationList';
 
 function Home() {
   useEffect(() => {
@@ -10,6 +12,8 @@ function Home() {
     return () => {};
   }, []);
 
+  const limitedPubList = publist.slice(0, 3);
+
   return (
     <div style={{
       maxWidth: '650px',
@@ -17,7 +21,7 @@ function Home() {
       padding: '10px',
     }}>
       
-      <div style={{ lineHeight: '1.2', fontSize: '16px', fontFamily: 'Lora' }}>
+    <div style={{ lineHeight: '1.2', fontSize: '16px', fontFamily: 'Lora' }}>
         <img src={denali} style={{width: '100%', borderRadius: '20px', marginTop: '20px'}} alt="Banner" />
         <p>
           Hello! I am Ahitagni (or Ahi), I am an undergrad at Rice University pursuing a dual degree in EE and CS. 
@@ -41,8 +45,11 @@ function Home() {
           the <a style={{textDecoration: 'none', color: "#0a507e"}} href='https://ajayan.rice.edu/'>Ajayan Group</a>, and deviced a way to convert 
           plastic waste to electrical energy at <a style={{textDecoration: 'none', color: "#0a507e"}} href='https://iitg.irins.org/profile/128220'>IIT Guwahati.</a>
         </p>
-      </div>
 
+        {/* limited publication list */}
+        <h4>Publications</h4>
+        <PublicationList publist={limitedPubList} isHome={true}/>
+      </div>
 
     </div>
   );
