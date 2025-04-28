@@ -5,7 +5,8 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Reading from './pages/Reading';
 import DeepDive from './pages/DeepDive';
-import Publications from './pages/Publications'
+import Publications from './pages/Publications';
+import Projects from './pages/Projects';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/reading" element={<Reading />} />
           <Route path="/deep-dives" element={<DeepDive />} />
           <Route path="/publications" element={<Publications />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </Layout>
     </Router>
