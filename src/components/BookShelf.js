@@ -344,24 +344,23 @@ export function Bookshelf({ books }) {
               src={book.coverImage} 
               alt={book.title}
               style={{
-                width: "120px",
-                height: "180px",
+                width: "20%",
                 objectFit: "cover",
                 boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
               }}
             />
             <div>
-              <h2 style={{ fontSize: "24px", marginBottom: "10px", marginTop: "0", textAlign: "left"}}>
+              <h2 style={{ fontSize: "18px", marginBottom: "0px", marginTop: "0", textAlign: "left", color: "#444"}}>
                 {book.title}
               </h2>
               
               {book.author && (
-                <p style={{ color: "#666", marginBottom: "10px", textAlign: "left" }}>
-                  By: {book.author}
+                <p style={{ color: "#666", marginBottom: "0px", textAlign: "left" }}>
+                  {book.author}
                 </p>
               )}
               
-              <p style={{ lineHeight: "1.4", textAlign: "left" }}>
+              <p style={{ lineHeight: "1.2", textAlign: "left" }}>
                 {book.description}
               </p>
             </div>

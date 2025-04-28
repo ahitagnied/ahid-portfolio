@@ -89,6 +89,7 @@ function Navbar() {
           </h3>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/reading">Reading</NavLink>
+          <NavLink to="/projects">Projects</NavLink>
           <NavLink to="/publications">Publications</NavLink>
           <NavLink to="/deep-dives">Deep Dives</NavLink>
         </div>
@@ -163,6 +164,7 @@ function Navbar() {
           <div style={{ marginBottom: '20px' }}>
             <NavLink to="/publications">Publications</NavLink>
             <NavLink to="/deep-dives">Deep Dives</NavLink>
+            <NavLink to="/projects">Projects</NavLink>
           </div>
           
           <div>
