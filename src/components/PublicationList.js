@@ -37,15 +37,39 @@ export function PublicationList({ publist, isHome }) {
                 />
 
                 <div>
-                    {/* cover image */}
+                    {/* paper title */}
                     <h4 style={{ fontSize: "16px", marginBottom: "4px", marginTop: "0px", textAlign: "left"}}>
                         <a style={{
                             textDecoration: "none", 
                             color: "#2d7093"}} 
-                            href={pubs.link}>
+                            href={pubs.paper}>
                                 {pubs.title}
                         </a>
                     </h4>
+                    
+                    {/* paper github and link */}
+                    <p style={{ color: "#666", fontSize: "14px", margin: "0px", textAlign: "left" }}>
+                        {pubs.github && (
+                            <a style={{
+                                textDecoration: "none",
+                                color: "#2d7093",
+                                marginRight: "4px"
+                            }} 
+                            href={pubs.github}>
+                                [Code]
+                            </a>
+                        )}
+                        {pubs.paper && (
+                            <a style={{
+                                textDecoration: "none",
+                                color: "#2d7093",
+                                marginRight: "4px"
+                            }} 
+                            href={pubs.paper}>
+                                [Paper]
+                            </a>
+                        )}
+                    </p>
 
                     {/* journal */}
                     <p style={{ color: "#666", fontSize: "14px", margin: "2px", textAlign: "left", fontStyle: "italic" }}>
