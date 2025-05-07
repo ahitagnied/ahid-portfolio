@@ -313,15 +313,23 @@ export function Bookshelf({ books }) {
         padding: "0 10px",
         fontFamily: "times new roman",
       }}>
-        <h2 style={{ fontSize: "24px", marginBottom: "10px"}}> {selectedBook.title} </h2>
+        <h2 style={{ fontSize: "22px", marginBottom: "10px", color: "#444"}}> {selectedBook.title} </h2>
         
         {selectedBook.author && (
           <p style={{ color: "#666", marginBottom: "10px" }}>
-            By: {selectedBook.author}
+            {selectedBook.author}
+          </p>
+        )}
+
+        {(selectedBook.read || selectedBook.rating) && (
+          <p style={{ color: "#222", marginBottom: "0px", textAlign: "left" }}>
+            {selectedBook.read && `Read: ${selectedBook.read}`}
+            {selectedBook.read && selectedBook.rating && " • "}
+            {selectedBook.rating && `Rating: ${selectedBook.rating}`}
           </p>
         )}
         
-        <p style={{ lineHeight: "1.2", justifyContent: "left" }}>
+        <p style={{ lineHeight: "1.4", justifyContent: "left", color: "#666", fontSize: "17px" }}>
           {selectedBook.description}
         </p>
       </div>
@@ -350,7 +358,7 @@ export function Bookshelf({ books }) {
               }}
             />
             <div>
-              <h2 style={{ fontSize: "18px", marginBottom: "0px", marginTop: "0", textAlign: "left", color: "#444"}}>
+              <h2 style={{ fontSize: "22px", marginBottom: "0px", marginTop: "0", textAlign: "left", color: "#444"}}>
                 {book.title}
               </h2>
               
@@ -359,8 +367,16 @@ export function Bookshelf({ books }) {
                   {book.author}
                 </p>
               )}
+
+              {(book.read || book.rating) && (
+                <p style={{ color: "#222", marginBottom: "0px", textAlign: "left" }}>
+                  {book.read && `Read: ${book.read}`}
+                  {book.read && book.rating && " • "}
+                  {book.rating && `Rating: ${book.rating}`}
+                </p>
+              )}
               
-              <p style={{ lineHeight: "1.2", textAlign: "left" }}>
+              <p style={{ lineHeight: "1.4", textAlign: "left", color: "#666", fontSize: "17px" }}>
                 {book.description}
               </p>
             </div>
