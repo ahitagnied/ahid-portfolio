@@ -1,6 +1,6 @@
 export const books = [
   {
-    title: "Book of Myths and Legends of Ancient Egypt",
+    title: "Myths and Legends of Ancient Egypt",
     slug: "myths-and-legends-of-ancient-egypt",
     spineColor: "#2e4175",
     textColor: "#ffffff",
