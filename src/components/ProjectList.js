@@ -16,74 +16,91 @@ export function ProjectList({ projlist, isHome }) {
             fontFamily: "times new roman",
           }}>
 
-            {projlist.map((proj, item) => (
-              
-              <div key={proj.title} style={{ 
-                marginBottom: "10px", 
-                display: "flex",
-                gap: "20px",
-                alignItems: "flex-start"
-              }}>
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "12px",
+              width: "100%"
+            }}>
+              {projlist.map((proj, item) => (
+                <div key={proj.title} style={{ 
+                  padding: "12px",
+                  border: "1px solid #e0e0e0",
+                  borderRadius: "8px",
+                  backgroundColor: "#fbfcfa",
+                  boxSizing: "border-box",
+                  position: "relative"
+                }}>
+                  {/* links in top right */}
+                  <div style={{
+                    position: "absolute",
+                    top: "20px",
+                    right: "20px",
+                    fontSize: "14px"
+                  }}>
+                    {proj.github && (
+                      <a style={{
+                          textDecoration: "none",
+                          color: "#2d7093",
+                          marginRight: "8px"
+                      }} 
+                      href={proj.github}>
+                        <img 
+                            src="https://cdn-icons-png.flaticon.com/128/7268/7268615.png" 
+                            alt="external link"
+                            style={{width: "12px", height: "12px"}}
+                        />
+                      </a>
+                    )}
+                    {proj.paper && (
+                      <a style={{
+                          textDecoration: "none",
+                          color: "#2d7093"
+                      }} 
+                      href={proj.paper}>
+                        <img 
+                            src="https://cdn-icons-png.flaticon.com/128/2991/2991112.png" 
+                            alt="external link"
+                            style={{width: "12px", height: "12px"}}
+                        />
+                      </a>
+                    )}
+                  </div>
 
-                {/* cover image */}
-                <img 
-                  src={proj.coverImage} 
-                  alt={proj.title}
-                  style={{
-                    marginTop: "5px",
-                    width: "100px",
-                    objectFit: "cover",
-                  }}
-                />
+                  {/* Title */}
+                  <h4 style={{ 
+                    fontSize: "16px", 
+                    marginBottom: "12px", 
+                    marginTop: "0px", 
+                    textAlign: "left", 
+                    color: "#444",
+                    fontWeight: "normal",
+                    paddingRight: proj.github || proj.paper ? "80px" : "0", // Make room for links
+                    fontFamily: "times new roman"
+                  }}>
+                    {proj.title}
+                  </h4>
 
-                <div>
-                    {/* cover image */}
-                    <h4 style={{ fontSize: "16px", marginBottom: "4px", marginTop: "0px", textAlign: "left", color: "#444"}}>
-                        {proj.title}
-                    </h4>
-
-                    {/* authors */}
-                    <p style={{ color: "#666", fontSize: "14px", margin: "0px", textAlign: "left" }}>
-                        {proj.members}
-                    </p>
-
-                    <p style={{ color: "#666", fontSize: "14px", margin: "0px", textAlign: "left" }}>
-                        {proj.github && (
-                            <a style={{
-                                textDecoration: "none",
-                                color: "#2d7093",
-                                marginRight: "4px"
-                            }} 
-                            href={proj.github}>
-                                [Code]
-                            </a>
-                        )}
-                        {proj.paper && (
-                            <a style={{
-                                textDecoration: "none",
-                                color: "#2d7093",
-                                marginRight: "4px"
-                            }} 
-                            href={proj.paper}>
-                                [Paper]
-                            </a>
-                        )}
-                    </p>
-
-
-                    {/* description */}
-                    <p style={{ color: "#666", fontSize: "14px", lineHeight: "1.2", textAlign: "left"}}>
-                        {proj.description}
-                    </p>
+                  {/* Description */}
+                  <p style={{ 
+                    color: "#666", 
+                    fontSize: "14px", 
+                    lineHeight: "1.2", 
+                    textAlign: "left",
+                    margin: "0",
+                    fontFamily: "times new roman"
+                  }}>
+                    {proj.description}
+                  </p>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
             
             {/* show see more publications in home page */}
             {isHome && (
             <div style={{
                 textAlign: "center", 
-                marginTop: "10px",
+                marginTop: "30px",
                 marginBottom: "20px"
             }}>
                 <a 
@@ -91,7 +108,8 @@ export function ProjectList({ projlist, isHome }) {
                 style={{
                     textDecoration: "none",
                     color: "#2d7093",
-                    fontSize: "14px"
+                    fontSize: "14px",
+                    fontFamily: "times new roman"
                 }}
                 >
                 See more projects →
@@ -102,7 +120,7 @@ export function ProjectList({ projlist, isHome }) {
             {!isHome && (
             <div style={{
                 textAlign: "center", 
-                marginTop: "10px",
+                marginTop: "30px",
                 marginBottom: "20px"
             }}>
                 <a 
@@ -110,7 +128,8 @@ export function ProjectList({ projlist, isHome }) {
                 style={{
                     textDecoration: "none",
                     color: "#2d7093",
-                    fontSize: "14px"
+                    fontSize: "14px",
+                    fontFamily: "times new roman"
                 }}
                 >
                 See more on Github →
