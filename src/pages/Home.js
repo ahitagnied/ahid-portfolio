@@ -27,20 +27,28 @@ function Home() {
     <div style={{ lineHeight: '1.2', fontSize: '16px', fontFamily: 'Lora' }}>
         <img src={profile} style={{width: '30%', borderRadius: '50%', marginTop: '20px', marginBottom: '20px', display: 'block', marginLeft: 'auto', marginRight: 'auto'}} alt="Banner" />
         <p>
-          Hello! I am Ahitagni (or Ahi), I am an undergrad at Rice University pursuing a dual degree in EE and CS. 
-          I like AI, software, and startups. Enjoy taking pictures, sailing and hiking. 
+          I am Ahi, an undergrad at Rice University pursuing a dual degree in EE and CS. 
+          I research Computer Vision & Spatial Intelligence, and love startups. Enjoy taking pictures, sailing and hiking. 
         </p>
 
 
         {/* Contact and Teams Box*/}
         <Contact data={data} />
 
+        <h4 style={{ 
+          fontSize: "16px", 
+          textAlign: "left", 
+          color: "#111",
+          fontFamily: "times new roman"
+        }}>
+          Research
+        </h4>
 
-        <h4>Research</h4>
         <p>
-          I am interested in CV and Spatial Intelligence. I research diffusion models and contro-nets at the <a style={{textDecoration: 'none', color: "#0a507e"}} 
+          I am an Applied Researcher at <a style={{textDecoration: 'none', color: "#0a507e"}} 
+          href='https://www.sievedata.com/'>Sieve</a> and research Gaussian Splatting at the <a style={{textDecoration: 'none', color: "#0a507e"}} 
           href='https://computationalimaging.rice.edu/'>Computational Imaging Group</a> with <a style={{textDecoration: 'none', color: "#0a507e"}} 
-          href='https://computationalimaging.rice.edu/team/ashok-veeraraghavan/'> Dr. Ashok Veeraraghavan</a>. Also exploring TTS and voice models for fun. 
+          href='https://computationalimaging.rice.edu/team/ashok-veeraraghavan/'> Dr. Ashok Veeraraghavan</a>. Also exploring Robotics Policies for fun. 
           <br/> <br/>
 
           Previously, I have developed the <strong>world's smallest batteries</strong> (30 um) at the <a style={{textDecoration: 'none', color: "#0a507e"}} 
