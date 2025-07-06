@@ -58,11 +58,25 @@ function Home() {
         </p>
 
         {/* limited publication list */}
-        <h4>Publications</h4>
+        <h4 style={{ 
+          fontSize: "16px", 
+          textAlign: "left", 
+          color: "#111",
+          fontFamily: "times new roman"
+        }}>
+          Publications
+        </h4>
         <PublicationList publist={limitedPubList} isHome={true}/>
 
         {/* limited projects list */}
-        <h4>Projects</h4>
+        <h4 style={{ 
+          fontSize: "16px", 
+          textAlign: "left", 
+          color: "#111",
+          fontFamily: "times new roman"
+        }}>
+          Projects
+        </h4>
         <ProjectList projlist={limitedProjList} isHome={true}/>
       </div>
 
