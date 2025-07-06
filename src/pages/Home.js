@@ -15,7 +15,7 @@ function Home() {
   }, []);
 
   const limitedPubList = publist.slice(0, 3);
-  const limitedProjList = projlist.slice(0, 3);
+  const limitedProjList = projlist.slice(0, 4);
 
   return (
     <div style={{
