@@ -16,29 +16,47 @@ export function DeepDives({ deepdives }) {
           fontFamily: "times new roman",
       }}>
       {deepdives.map((item) => (
-        <div key={item.title} style={{ 
-          paddingBottom: "15px", 
-          display: "flex",
-          gap: "20px",
-          alignItems: "flex-start",
-        }}>
-          <div>
-            <h2 style={{ fontSize: "18px", marginTop: "0", textAlign: "left", color: "#373737"}}>
-              {item.title}
-            </h2>
-            
-            <p style={{ lineHeight: "1.4", textAlign: "left", color: "#5e5e5e",}}>
-              {item.description}
-            </p>
-
-            <a style={{textDecoration: "none", color: "#2d7093"}} href={item.link}>{item.github}</a>
-
-            <div style={{
-              width: "80%",
-              height: "1px",
-              backgroundColor: "#e0e0e0",
-              margin: "15px auto 0"
-            }}></div>
+        <div>
+          <div key={item.title} style={{ 
+            display: "flex",
+            gap: "10px",
+            alignItems: "flex-start",
+          }}>
+            <div>
+              <h2 style={{ 
+                fontSize: "16px", 
+                marginTop: "0", 
+                textAlign: "left", 
+                color: "#111",
+                fontWeight: "normal",
+              }}>
+                {item.title} <a style={{
+                                textDecoration: "none", 
+                                color: "#2d7093"
+                              }}
+                              href={item.link}>
+                                {item.github}
+                              </a>
+              </h2>
+              
+              <p style={{ 
+                fontSize: "16px", 
+                lineHeight: "1.2", 
+                textAlign: "left", 
+                color: "#666", 
+              }}>
+                {item.description}
+              </p>
+            </div>
+          </div>
+          
+          {/* divider */}
+          <div style={{
+                width: "100%",
+                height: "1px",
+                borderBottom: "1.5px dashed #e0e0e0", 
+                marginBottom: "10px",
+              }}>
           </div>
         </div>
       ))}
