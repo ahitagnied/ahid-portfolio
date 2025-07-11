@@ -1,4 +1,4 @@
-import profile from '../assets/profile.jpg'
+import profile from '../assets/profile.jpeg'
 import React, { useEffect } from 'react';
 import Contact from "../components/Contact";
 import { data } from '../contents/ContactData';
@@ -25,7 +25,7 @@ function Home() {
     }}>
       
     <div style={{ lineHeight: '1.2', fontSize: '16px', fontFamily: 'Lora' }}>
-        <img src={profile} style={{width: '30%', borderRadius: '50%', marginTop: '20px', marginBottom: '20px', display: 'block', marginLeft: 'auto', marginRight: 'auto'}} alt="Banner" />
+        <img src={profile} style={{width: '30%', aspectRatio: '1', borderRadius: '50%', marginTop: '20px', marginBottom: '20px', display: 'block', marginLeft: 'auto', marginRight: 'auto'}} alt="Banner" />
         <p>
           I am Ahi, an undergrad at Rice University pursuing a dual degree in EE and CS. 
           I research Computer Vision & Spatial Intelligence, and love startups. Enjoy taking pictures, sailing and hiking. 
