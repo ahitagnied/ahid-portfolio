@@ -6,8 +6,8 @@ export const deepdivecont = [
       github: "ahitagnied/deep-learning"
     },
     {
-      title: "RasterRascal",
-      description: "Minimal GPU implementation.",
+      title: "WorMod",
+      description: "Minimalistic World Model Implementation",
       link: "https://github.com/ahitagnied/",
       github: "ahitagnied/coming-soon"
     },
