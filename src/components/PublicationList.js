@@ -22,7 +22,9 @@ export function PublicationList({ publist, isHome }) {
                 marginBottom: "10px", 
                 display: "flex",
                 gap: "20px",
-                alignItems: "flex-start"
+                alignItems: "flex-start", 
+                borderBottom: item !== publist.length - 1 ? "1px dashed #ccc" : "none",
+                paddingBottom: "10px"
               }}>
 
                 {/* cover image */}
