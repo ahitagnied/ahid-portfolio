@@ -313,7 +313,7 @@ export function Bookshelf({ books }) {
         padding: "0 10px",
         fontFamily: "times new roman",
       }}>
-        <h2 style={{ fontSize: "22px", marginBottom: "10px", color: "#444"}}> {selectedBook.title} </h2>
+        <h2 style={{ fontSize: "18px", marginBottom: "10px", color: "#444"}}> {selectedBook.title} </h2>
         
         {selectedBook.author && (
           <p style={{ color: "#666", marginBottom: "10px" }}>
@@ -358,7 +358,7 @@ export function Bookshelf({ books }) {
               }}
             />
             <div>
-              <h2 style={{ fontSize: "22px", marginBottom: "0px", marginTop: "0", textAlign: "left", color: "#444"}}>
+              <h2 style={{ fontSize: "18px", marginBottom: "0px", marginTop: "0", textAlign: "left", color: "#444"}}>
                 {book.title}
               </h2>
               
