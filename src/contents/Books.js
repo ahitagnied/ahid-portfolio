@@ -1,16 +1,46 @@
 export const books = [
   {
-    title: "Myths and Legends of Ancient Egypt",
-    slug: "myths-and-legends-of-ancient-egypt",
-    spineColor: "#2e4175",
+    title: "On Intelligence",
+    slug: "on-intelligence",
+    spineColor: "#11599C",
     textColor: "#ffffff",
-    coverImage: "https://m.media-amazon.com/images/I/81dx8c07eWL._SL1500_.jpg",
-    author: "Joyce Tyldesley",
-    read: "Currently Reading",
-    rating: "~",
+    coverImage: "https://m.media-amazon.com/images/I/41PbdH-FFEL._SY445_SX342_.jpg",
+    author: "Jeff Hawkins",
+    read: "July 1, 2025",
+    rating: "9.3/10",
     description: (
       <>
-        <p>Current Read</p>
+        <p>
+          Hawkins strives toward a singular, all-encompassing theory of intelligence centered on the neocortex, which he claims is a memory and prediction system running one algorithm that is hierarchical, sparse, and sequence-centric, replicated everywhere. The book is a unifying lens. Once you adopt it, perception, action, and “understanding” reduce to modeling the world and predicting what comes next.
+        </p>
+
+        <p>
+          The value here is the bridge. He reads the neocortex as a working spec and asks ML to honor its rules: time, hierarchy, feedback, sparsity, continual learning.
+          On ML and AGI, the take is clear. Scaling pattern matchers is not the same as building a cortex. We need architectures that learn <i>temporal</i> structure, use top-down prediction as a core signal, represent knowledge sparsely and compositionally, and learn continuously without labels. Even if modern LLMs blunt some of his 2004 criticisms, the framework raises the bar for intelligence: not just fitting distributions, but maintaining a world model that anticipates and corrects itself in real time.
+        </p>
+
+        <p>
+          The arguments are light on proofs and sometimes hand-wavy on implementation. Still, I would rather have a sharp theory that orients my engineering than a bag of heuristics with no north star. This book offers that orientation, a single theory of intelligence that is specific enough to disagree with and practical enough to guide design.
+        </p>
+      </>
+    )
+  },
+  {
+    title: "Ikigai",
+    slug: "ikigai",
+    spineColor: "#9FD2D6",
+    textColor: "#255054",
+    coverImage: "https://m.media-amazon.com/images/I/41nS26MN37L._SY445_SX342_.jpg",
+    author: "Hector Garcia and Francesc Miralles",
+    read: "June 10, 2025",
+    rating: "8.7/10",
+    description: (
+      <>
+        <p>Ikigai reframes the familiar “follow your passion” mantra into a living practice, rooted in Okinawan longevity and small town rhythms. It’s not a panacea or a productivity hack, but a gentle invitation to tune into what makes each morning worth waking up for.</p>
+
+        <p>I liked the way Garcia and Miralles peel back ikigai’s cultural layers: tea gatherings, neighborhood dance circles, morning walks, showing how small rituals weave purpose into daily life. These vignettes aren’t glossy success stories, they’re snapshots of real people finding meaning in the mundane. Purpose here isn’t a solitary Everest to conquer but a communal flame to share.</p>
+        
+        <p>That said, the book sometimes drifts into platitudes. “Move toward what excites you” feels obvious without deeper tactics. I’d have liked a tougher edge, exercises that force you beyond reflection into action. Still, Ikigai’s quiet wisdom lives in its patience. It won’t yell at you to hustle harder, but it will remind you why a steady ember beats a wildfire.</p>
       </>
     )
   },
