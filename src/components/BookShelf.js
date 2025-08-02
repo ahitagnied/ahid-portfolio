@@ -391,7 +391,7 @@ export function Bookshelf({ books }) {
           color: "#666",
           fontFamily: "Arial, sans-serif",
         }}>
-          inspired by <a href="https://adammaj.com/reading" style={{textDecoration: "none", color: "black"}}>adam-maj</a>
+          Inspired by <a href="https://adammaj.com/reading" style={{textDecoration: "none", color: "black"}}>adam-maj</a>
         </p>
       </div>
     )}
