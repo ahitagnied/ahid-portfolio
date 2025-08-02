@@ -1,4 +1,4 @@
-import profile from '../assets/profile.png'
+import profile from '../assets/profile.jpg'
 import React, { useEffect } from 'react';
 import Contact from "../components/Contact";
 import { data } from '../contents/ContactData';
@@ -6,6 +6,12 @@ import { publist } from '../contents/PublicationList'
 import { PublicationList } from '../components/PublicationList';
 import { ProjectList } from '../components/ProjectList';
 import { projlist } from '../contents/ProjList'
+
+const Link = ({ href, children }) => (
+  <a href={href} style={{textDecoration: 'none', color: "#0a507e"}}>
+    {children}
+  </a>
+);
 
 function Home() {
   useEffect(() => {
@@ -27,8 +33,8 @@ function Home() {
     <div style={{ lineHeight: '1.2', fontSize: '16px', fontFamily: 'Lora' }}>
         <img src={profile} style={{width: '30%', aspectRatio: '1', borderRadius: '50%', marginTop: '20px', marginBottom: '20px', display: 'block', marginLeft: 'auto', marginRight: 'auto'}} alt="Banner" />
         <p>
-          I am Ahi, an undergrad at Rice University pursuing a dual degree in EE and CS. 
-          I research Computer Vision & Spatial Intelligence, and love startups. Enjoy taking pictures, sailing and hiking. 
+          I am Ahi, a junior at <Link href='https://www.rice.edu/'>Rice University</Link> studying EECS. I am interested in foundational models in Vision & Robotics.
+          I am a part of <Link href='https://www.http://neo.com//'>Neo</Link>, love building start-ups, hiking, and sailing. 
         </p>
 
 
@@ -45,16 +51,13 @@ function Home() {
         </h4>
 
         <p>
-          I am an Applied Researcher at <a style={{textDecoration: 'none', color: "#0a507e"}} 
-          href='https://www.sievedata.com/'>Sieve</a> and research Gaussian Splatting at the <a style={{textDecoration: 'none', color: "#0a507e"}} 
-          href='https://computationalimaging.rice.edu/'>Computational Imaging Group</a> with <a style={{textDecoration: 'none', color: "#0a507e"}} 
-          href='https://computationalimaging.rice.edu/team/ashok-veeraraghavan/'> Dr. Ashok Veeraraghavan</a>. Also exploring Robotics Policies for fun. 
-          <br/> <br/>
+          I am an Applied Researcher at <Link href='https://www.sievedata.com/'>Sieve</Link> where I build ML filters to curate and scale high-fidelity video datasets for companies like <Link href='https://www.moonvalley.com/'>MoonValley</Link>. 
+          I also research Gaussian Splatting at the <Link href='https://computationalimaging.rice.edu/'>Computational Imaging Group</Link> with <Link href='https://scholar.google.com/citations?user=tI-oUmsAAAAJ&hl=en'> Dr. Ashok Veeraraghavan</Link>. 
+          
+          <br/><br/>
 
-          Previously, I have developed the <strong>world's smallest batteries</strong> (30 um) at the <a style={{textDecoration: 'none', color: "#0a507e"}} 
-          href='https://www.media.mit.edu/groups/nano-cybernetic-biotrek/overview/'>MIT Media Lab</a>, researched novel Li/Na-ion batteries at 
-          the <a style={{textDecoration: 'none', color: "#0a507e"}} href='https://ajayan.rice.edu/'>Ajayan Group</a>, and deviced a way to convert 
-          plastic waste to electrical energy at <a style={{textDecoration: 'none', color: "#0a507e"}} href='https://iitg.irins.org/profile/128220'>IIT Guwahati.</a>
+          Previously, I have developed the world's smallest batteries (30 um) for Colloidal Robotics at the <Link href='https://www.media.mit.edu/groups/nano-cybernetic-biotrek/overview/'>MIT Media Lab</Link>, researched Li/Na-ion batteries at 
+          the <Link href='https://ajayan.rice.edu/'>Ajayan Group</Link>, and deviced a method to convert plastic waste to energy at <Link href='https://scholar.google.com/citations?user=JlmilbMAAAAJ&hl=en'>IIT Guwahati.</Link>
         </p>
 
         {/* limited publication list */}
