@@ -31,7 +31,7 @@ function Home() {
     }}>
       
     <div style={{ lineHeight: '1.2', fontSize: '16px', fontFamily: 'Lora' }}>
-        <img src={profile} style={{width: '30%', aspectRatio: '1', borderRadius: '50%', marginTop: '20px', marginBottom: '20px', display: 'block', marginLeft: 'auto', marginRight: 'auto'}} alt="Banner" />
+        <img src={profile} style={{width: 'max(30%, 150px)', aspectRatio: '1', borderRadius: '50%', marginTop: '20px', marginBottom: '20px', display: 'block', marginLeft: 'auto', marginRight: 'auto'}} alt="Banner" />
         <p>
           I am Ahi, a junior at <Link href='https://www.rice.edu/'>Rice University</Link> studying EECS. I am interested in foundational models in Vision & Robotics.
           I am a part of <Link href='https://neo.com/'>Neo</Link>, love building start-ups, hiking, and sailing. 
