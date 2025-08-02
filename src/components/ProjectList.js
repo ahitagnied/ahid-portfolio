@@ -29,24 +29,30 @@ export function ProjectList({ projlist, isHome }) {
                   borderRadius: "8px",
                   backgroundColor: "#fbfcfa",
                   boxSizing: "border-box",
-                  position: "relative"
-                }}>
+                  position: "relative",
+                  cursor: "pointer",
+                  transition: "background-color 0.2s ease"
+                }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#f0f4f8"}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#f8f9f6ff"}>
                   {/* links in top right */}
                   <div style={{
                     position: "absolute",
                     top: "20px",
                     right: "20px",
-                    fontSize: "14px"
+                    fontSize: "14px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px"
                   }}>
                     {proj.github && (
                       <a style={{
                           textDecoration: "none",
                           color: "#2d7093",
-                          marginRight: "8px"
                       }} 
                       href={proj.github}>
                         <img 
-                            src="https://cdn-icons-png.flaticon.com/128/7268/7268615.png" 
+                            src="https://cdn-icons-png.flaticon.com/512/8944/8944297.png" 
                             alt="external link"
                             style={{width: "12px", height: "12px"}}
                         />
@@ -59,7 +65,7 @@ export function ProjectList({ projlist, isHome }) {
                       }} 
                       href={proj.paper}>
                         <img 
-                            src="https://cdn-icons-png.flaticon.com/128/2991/2991112.png" 
+                            src="https://cdn-icons-png.flaticon.com/512/6639/6639062.png" 
                             alt="external link"
                             style={{width: "12px", height: "12px"}}
                         />
