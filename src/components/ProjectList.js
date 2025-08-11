@@ -34,7 +34,16 @@ export function ProjectList({ projlist, isHome }) {
                   transition: "background-color 0.2s ease"
                 }}
                   onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#f0f4f8"}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#f8f9f6ff"}>
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#f8f9f6ff"}
+                  onClick={() => {
+                    if (proj.github && proj.paper) {
+                      window.open(proj.github, '_blank');
+                    } else if (proj.github) {
+                      window.open(proj.github, '_blank');
+                    } else if (proj.paper) {
+                      window.open(proj.paper, '_blank');
+                    }
+                  }}>
                   {/* links in top right */}
                   <div style={{
                     position: "absolute",
@@ -50,7 +59,10 @@ export function ProjectList({ projlist, isHome }) {
                           textDecoration: "none",
                           color: "#2d7093",
                       }} 
-                      href={proj.github}>
+                      href={proj.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}>
                         <img 
                             src="https://cdn-icons-png.flaticon.com/512/8944/8944297.png" 
                             alt="external link"
@@ -63,7 +75,10 @@ export function ProjectList({ projlist, isHome }) {
                           textDecoration: "none",
                           color: "#2d7093"
                       }} 
-                      href={proj.paper}>
+                      href={proj.paper}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}>
                         <img 
                             src="https://cdn-icons-png.flaticon.com/512/6639/6639062.png" 
                             alt="external link"
@@ -81,7 +96,7 @@ export function ProjectList({ projlist, isHome }) {
                     textAlign: "left", 
                     color: "#444",
                     fontWeight: "normal",
-                    paddingRight: proj.github || proj.paper ? "80px" : "0", // Make room for links
+                    paddingRight: proj.github || proj.paper ? "80px" : "0",
                     fontFamily: "times new roman"
                   }}>
                     {proj.title}
