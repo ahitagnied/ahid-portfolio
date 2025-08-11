@@ -10,6 +10,11 @@ export const projlist = [
         description: "A Frugal Implementation of ChatGPT-2 with Triton Kernels"
     },
     {
+        title: "Deep Learning Deep Dive",
+        github: "https://github.com/ahitagnied/deep-learning",
+        description: "Tracing deep learning’s history through its most influential models"
+    },
+    {
         title: "Klix",
         github: "https://github.com/ahitagnied/klix-ai",
         description: "Real-Time AI Voice Calling Agent & Evaluation System"
