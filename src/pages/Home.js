@@ -1,4 +1,4 @@
-import profile from '../assets/profile.jpg'
+import profile from '../assets/profile.jpeg'
 import React, { useEffect } from 'react';
 import Contact from "../components/Contact";
 import { data } from '../contents/ContactData';
