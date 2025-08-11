@@ -9,10 +9,10 @@ export function ProjectList({ projlist, isHome }) {
 
     return (
         <div style={{
-            marginTop: isHome ? "10px" : "30px",
+            marginTop: "10px",
             maxWidth: "650px",
-            margin: isHome ? "0" : "50px auto 0",
-            padding: isHome ? "0" : "0 20px",
+            margin: "0",
+            padding: "0",
             fontFamily: "times new roman",
           }}>
 
