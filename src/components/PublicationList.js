@@ -40,7 +40,7 @@ export function PublicationList({ publist, isHome }) {
 
                 <div>
                     {/* paper title */}
-                    <h4 style={{ fontSize: "16px", marginBottom: "4px", marginTop: "0px", textAlign: "left"}}>
+                    <h4 style={{ fontSize: "15px", marginBottom: "4px", marginTop: "0px", textAlign: "left"}}>
                         <a style={{
                             textDecoration: "none", 
                             color: "#2d7093"}} 
