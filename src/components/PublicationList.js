@@ -13,7 +13,7 @@ export function PublicationList({ publist, isHome }) {
             maxWidth: "650px",
             margin: isHome ? "0" : "50px auto 0",
             padding: isHome ? "0" : "0 20px",
-            fontFamily: "times new roman",
+            fontFamily: "Lora",
           }}>
 
             {publist.map((pubs, item) => (
@@ -32,8 +32,8 @@ export function PublicationList({ publist, isHome }) {
                   src={pubs.coverImage} 
                   alt={pubs.title}
                   style={{
-                    width: "100px",
-                    height: "100px",
+                    width: "120px",
+                    aspectRatio: "1/1",
                     objectFit: "cover",
                   }}
                 />
