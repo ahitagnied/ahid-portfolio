@@ -23,7 +23,6 @@ export function PublicationList({ publist, isHome }) {
                 display: "flex",
                 gap: "20px",
                 alignItems: "flex-start", 
-                borderBottom: item !== publist.length - 1 ? "1px dashed #ccc" : "none",
                 paddingBottom: "10px"
               }}>
 
