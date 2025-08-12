@@ -32,7 +32,7 @@ export function PublicationList({ publist, isHome }) {
                   src={pubs.coverImage} 
                   alt={pubs.title}
                   style={{
-                    width: "120px",
+                    width: "110px",
                     aspectRatio: "1/1",
                     objectFit: "cover",
                   }}
