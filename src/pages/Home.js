@@ -1,11 +1,12 @@
 import profile from '../assets/profile.jpeg'
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Contact from "../components/Contact";
 import { data } from '../contents/ContactData';
 import { publist } from '../contents/PublicationList'
 import { PublicationList } from '../components/PublicationList';
 import { ProjectList } from '../components/ProjectList';
 import { projlist } from '../contents/ProjList'
+import { EssayList } from '../components/EssayList';
 
 const Link = ({ href, children }) => (
   <a href={href} style={{textDecoration: 'none', color: "#0a507e"}}>
@@ -22,6 +23,23 @@ function Home() {
 
   const limitedPubList = publist.slice(0, 3);
   const limitedProjList = projlist.slice(0, 4);
+  const [essayFiles, setEssayFiles] = useState([]);
+
+  useEffect(() => {
+    const loadEssayFiles = async () => {
+      try {
+        const response = await fetch('/essays/manifest.json');
+        if (response.ok) {
+          const manifest = await response.json();
+          setEssayFiles(manifest.files);
+        }
+      } catch (err) {
+        console.error('Error loading essay files:', err);
+      }
+    };
+    
+    loadEssayFiles();
+  }, []);
 
   return (
     <div style={{
@@ -71,6 +89,16 @@ function Home() {
         </h4>
         <PublicationList publist={limitedPubList} isHome={true}/>
 
+        <h4 style={{ 
+          fontSize: "16px", 
+          textAlign: "left", 
+          color: "#111",
+          fontFamily: "times new roman"
+        }}>
+          Essays
+        </h4>
+        <EssayList files={essayFiles} limit={3} isHome={true} />
+
         {/* limited projects list */}
         <h4 style={{ 
           fontSize: "16px", 
@@ -80,7 +108,7 @@ function Home() {
         }}>
           Projects
         </h4>
-        <ProjectList projlist={limitedProjList} isHome={true}/>
+        <ProjectList projlist={limitedProjList} showPage={false}/>
       </div>
 
     </div>
