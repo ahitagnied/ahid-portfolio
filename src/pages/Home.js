@@ -7,6 +7,8 @@ import { PublicationList } from '../components/PublicationList';
 import { ProjectList } from '../components/ProjectList';
 import { projlist } from '../contents/ProjList'
 import { EssayList } from '../components/EssayList';
+import PhotoGallery from "../components/PhotoGallery";
+import { photos } from '../contents/Photos';
 
 const Link = ({ href, children }) => (
   <a href={href} style={{textDecoration: 'none', color: "#0a507e"}}>
@@ -63,7 +65,6 @@ function Home() {
           fontSize: "16px", 
           textAlign: "left", 
           color: "#111",
-          fontFamily: "times new roman"
         }}>
           Research
         </h4>
@@ -83,17 +84,27 @@ function Home() {
           fontSize: "16px", 
           textAlign: "left", 
           color: "#111",
-          fontFamily: "times new roman"
         }}>
           Publications
         </h4>
         <PublicationList publist={limitedPubList} isHome={true}/>
+        
+        <h4 style={{ 
+          fontSize: "16px", 
+          textAlign: "left", 
+          color: "#111",
+        }}>
+          Photography
+        </h4>
+        <p>
+          Like pixels of all kinds. Most pictures using a PowerShot A540, sometimes a Nikon D5600.
+        </p>
+        <PhotoGallery photos={photos} />
 
         <h4 style={{ 
           fontSize: "16px", 
           textAlign: "left", 
           color: "#111",
-          fontFamily: "times new roman"
         }}>
           Essays
         </h4>
