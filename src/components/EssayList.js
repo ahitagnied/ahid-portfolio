@@ -66,7 +66,6 @@ export const EssayList = ({ files, limit, isHome = false}) => {
             display: "flex", 
             justifyContent: "space-between", 
             alignItems: "center", 
-            padding: "10px 0", 
             transition: "background-color 0.2s ease" 
           }}>
             <h3 style={{ fontSize: "16px", margin: "0", color: "#444", fontWeight: "normal" }}>
