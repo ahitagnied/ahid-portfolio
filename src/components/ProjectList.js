@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-export function ProjectList({ projlist, isHome }) {
+export function ProjectList({ projlist, showPage }) {
     useEffect(() => {
       document.title = "Projects | Ahitagni D";
   
@@ -118,7 +118,7 @@ export function ProjectList({ projlist, isHome }) {
             </div>
             
             {/* show see more publications in home page */}
-            {isHome && (
+            {showPage && (
             <div style={{
                 textAlign: "center", 
                 marginTop: "30px",
@@ -138,7 +138,7 @@ export function ProjectList({ projlist, isHome }) {
             </div>
             )}
 
-            {!isHome && (
+            {!showPage && (
             <div style={{
                 textAlign: "center", 
                 marginTop: "30px",
