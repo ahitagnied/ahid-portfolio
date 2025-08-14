@@ -4,12 +4,16 @@ export const photos = [
         location: "Presidio, San Francisco",
     },
     {
+      filename: "san-lucas.jpg",
+      location: "San Lucas, Mexico",
+    },
+    {
       filename: "alaska.jpg",
       location: "Denali, Alaska",
     },
     {
-      filename: "san-lucas.jpg",
-      location: "San Lucas, Mexico",
+      filename: "todos-santos.jpg",
+      location: "Totos Santos, Mexico",
     }
   ];
   
