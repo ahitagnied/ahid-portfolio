@@ -70,7 +70,7 @@ function Home() {
         </h4>
 
         <p>
-          I am an Applied Researcher at <Link href='https://www.sievedata.com/'>Sieve</Link> where I build ML filters to curate and scale high-fidelity video datasets for companies like <Link href='https://www.moonvalley.com/'>MoonValley</Link>. 
+          I research Video Understanding at <Link href='https://www.sievedata.com/'>Sieve</Link> to curate and scale high-fidelity video datasets for companies like <Link href='https://www.moonvalley.com/'>MoonValley</Link>. 
           I also research Gaussian Splatting at the <Link href='https://computationalimaging.rice.edu/'>Computational Imaging Group</Link> with <Link href='https://scholar.google.com/citations?user=tI-oUmsAAAAJ&hl=en'> Dr. Ashok Veeraraghavan</Link>. 
           
           <br/><br/>
