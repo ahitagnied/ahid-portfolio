@@ -116,13 +116,13 @@ export default function PhotoGallery({ photos }) {
     left: '50%',
     transform: 'translateX(-50%)',
     display: 'flex',
-    gap: '12px',
+    gap: '6px',
     alignItems: 'center',
   };
 
   const dotsContainerStyle = {
     display: 'flex',
-    gap: '8px',
+    gap: '6px',
     alignItems: 'center',
     padding: '6px 10px',
     background: 'rgba(0, 0, 0, 0.3)',
@@ -145,7 +145,7 @@ export default function PhotoGallery({ photos }) {
   };
 
   const dotButtonStyle = (isActive) => ({
-    width: isActive ? '12px' : '6px',
+    width: isActive ? '18px' : '6px',
     height: '6px',
     borderRadius: '3px',
     border: 'none',
