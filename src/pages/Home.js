@@ -1,4 +1,3 @@
-import profile from '../assets/profile.jpeg'
 import React, { useEffect, useState } from 'react';
 import Contact from "../components/Contact";
 import { data } from '../contents/ContactData';
@@ -9,6 +8,8 @@ import { projlist } from '../contents/ProjList'
 import { EssayList } from '../components/EssayList';
 import PhotoGallery from "../components/PhotoGallery";
 import { photos } from '../contents/Photos';
+import { Work } from '../components/Work';
+import { worklist } from '../contents/WorkList';
 
 const Link = ({ href, children }) => (
   <a href={href} style={{textDecoration: 'none', color: "#0a507e"}}>
@@ -19,12 +20,11 @@ const Link = ({ href, children }) => (
 function Home() {
   useEffect(() => {
     document.title = "Home | Ahitagni D";
-
-    return () => {};
   }, []);
 
   const limitedPubList = publist.slice(0, 3);
   const limitedProjList = projlist.slice(0, 4);
+  const limitedWorkList = worklist.slice(0, 5);
   const [essayFiles, setEssayFiles] = useState([]);
 
   useEffect(() => {
@@ -47,19 +47,23 @@ function Home() {
     <div style={{
       maxWidth: '650px',
       margin: '0 auto',
-      padding: '10px',
+      paddingTop: '15px',
     }}>
       
     <div style={{ lineHeight: '1.2', fontSize: '16px', fontFamily: 'Lora' }}>
-        <img src={profile} style={{width: 'max(30%, 145px)', aspectRatio: '1', borderRadius: '50%', marginTop: '20px', marginBottom: '20px', display: 'block', marginLeft: 'auto', marginRight: 'auto'}} alt="Banner" />
         <p>
-          Junior at <Link href='https://www.rice.edu/'>Rice</Link> studying EECS. I am interested in foundational models in Vision and explore consumer AI using vision and audio.
-          I am a part of <Link href='https://neo.com/'>Neo</Link>, and scout for <Link href='https://clayvc.io'>Clay VC</Link> [<Link href='https://calendly.com/ahitagnid/new-meeting'>connect</Link>]. 
-        </p>
+          hey! I am Ahi, I study EECS at <Link href='https://www.rice.edu/'>Rice</Link>. I love ML and consumer AI exploring new ways to interact with reality & imagination. I am a part of <Link href='https://neo.com/'>Neo</Link>, and scout for <Link href='https://clayvc.io'>Clay VC</Link>. If you are an early stage founder, would love to <Link href='https://calendly.com/ahitagnid/new-meeting'>connect</Link>.
 
+          <br/><br/>
+
+          Currently, I research Video Understanding at <Link href='https://www.sievedata.com/'>Sieve</Link> to curate video datasets for top AI labs.
+        </p>
 
         {/* Contact and Teams Box*/}
         <Contact data={data} />
+
+        {/* Work Experience */}
+        {/* <Work worklist={limitedWorkList}/> */}
 
         <h4 style={{ 
           fontSize: "12px", 
@@ -70,29 +74,17 @@ function Home() {
         }}>
           [RESEARCH]
         </h4>
-
+        
         <p>
-          I am interested in using vision to represent and interact with reality. My interests include but are not limited to 3D Neural Representations, World Models, & VLAs.
-
-          <br/><br/>
-
-          Currently, I research Video Understanding at <Link href='https://www.sievedata.com/'>Sieve</Link> to curate video datasets for top AI labs and explore Gaussian Splatting at the <Link href='https://computationalimaging.rice.edu/'>Computational Imaging Group</Link> with <Link href='https://scholar.google.com/citations?user=tI-oUmsAAAAJ&hl=en'> Dr. Ashok Veeraraghavan</Link>
+          I am interested in novel methods to represent and interact with reality. My interests include but are not limited to Neural Radiance Fields, World Models, & VLAs. I research Gaussian Splatting with <Link href='https://scholar.google.com/citations?user=tI-oUmsAAAAJ&hl=en'> Dr. Ashok Veeraraghavan</Link>
 
           <br/><br/>
 
           Previously, I worked on Colloidal Robotics at the <Link href='https://www.media.mit.edu/groups/nano-cybernetic-biotrek/overview/'>MIT Media Lab</Link>, researched Li/Na-ion batteries at the <Link href='https://ajayan.rice.edu/'>Ajayan Group</Link>, and energy devices at <Link href='https://scholar.google.com/citations?user=JlmilbMAAAAJ&hl=en'>IIT Guwahati.</Link>
-        </p>
 
-        {/* limited publication list */}
-        <h4 style={{ 
-          fontSize: "12px", 
-          textAlign: "left", 
-          color: "#111",
-          paddingTop: "10px",
-          paddingBottom: "10px"
-        }}>
-          [PUBLICATIONS]
-        </h4>
+          <br/><br/>
+        </p>
+        
         <PublicationList publist={limitedPubList} isHome={true}/>
         
         <h4 style={{ 
@@ -120,7 +112,6 @@ function Home() {
         </h4>
         <EssayList files={essayFiles} limit={3} isHome={true} />
 
-        {/* limited projects list */}
         <h4 style={{ 
           fontSize: "12px", 
           textAlign: "left", 
