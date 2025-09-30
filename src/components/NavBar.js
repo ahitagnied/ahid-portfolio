@@ -105,7 +105,7 @@ function Navbar() {
             FIND ME ON
           </h3>
           <NavLink to="https://github.com/ahitagnied" isExternal>GitHub</NavLink>
-          <NavLink to="https://x.com/ahitagnied" isExternal>X</NavLink>
+          <NavLink to="https://scholar.google.com/citations?user=GLTc7LcAAAAJ&hl=en" isExternal>Scholar</NavLink>
         </div>
       </nav>
 
@@ -176,7 +176,7 @@ function Navbar() {
             FIND ME ON
             </h3>
             <NavLink to="https://github.com/ahitagnied" isExternal>GitHub</NavLink>
-            <NavLink to="https://x.com/ahitagnied" isExternal>X</NavLink>
+            <NavLink to="https://scholar.google.com/citations?user=GLTc7LcAAAAJ&hl=en" isExternal>Scholar</NavLink>
           </div>
         </div>
       )}
