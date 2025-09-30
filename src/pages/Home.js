@@ -62,11 +62,11 @@ function Home() {
         <Contact data={data} />
 
         <h4 style={{ 
-          fontSize: "16px", 
+          fontSize: "12px", 
           textAlign: "left", 
           color: "#111",
         }}>
-          Research
+          [RESEARCH]
         </h4>
 
         <p>
@@ -75,26 +75,26 @@ function Home() {
           
           <br/><br/>
 
-          Previously, I have developed the world's smallest batteries (30 um) for Colloidal Robotics at the <Link href='https://www.media.mit.edu/groups/nano-cybernetic-biotrek/overview/'>MIT Media Lab</Link>, researched Li/Na-ion batteries at 
-          the <Link href='https://ajayan.rice.edu/'>Ajayan Group</Link>, and deviced a method to convert plastic waste to energy at <Link href='https://scholar.google.com/citations?user=JlmilbMAAAAJ&hl=en'>IIT Guwahati.</Link>
+          Previously, I have developed Colloidal Robotics at the <Link href='https://www.media.mit.edu/groups/nano-cybernetic-biotrek/overview/'>MIT Media Lab</Link>, researched Li/Na-ion batteries at 
+          the <Link href='https://ajayan.rice.edu/'>Ajayan Group</Link>, and energy devices at <Link href='https://scholar.google.com/citations?user=JlmilbMAAAAJ&hl=en'>IIT Guwahati.</Link>
         </p>
 
         {/* limited publication list */}
         <h4 style={{ 
-          fontSize: "16px", 
+          fontSize: "12px", 
           textAlign: "left", 
           color: "#111",
         }}>
-          Publications
+          [PUBLICATIONS]
         </h4>
         <PublicationList publist={limitedPubList} isHome={true}/>
         
         <h4 style={{ 
-          fontSize: "16px", 
+          fontSize: "12px", 
           textAlign: "left", 
           color: "#111",
         }}>
-          Photography
+          [PHOTOGRAPHY]
         </h4>
         <p>
           Like pixels of all kinds. Most pictures using a PowerShot A540, sometimes a Nikon D5600.
@@ -102,22 +102,21 @@ function Home() {
         <PhotoGallery photos={photos} />
 
         <h4 style={{ 
-          fontSize: "16px", 
+          fontSize: "12px", 
           textAlign: "left", 
           color: "#111",
         }}>
-          Essays
+          [ESSAYS]
         </h4>
         <EssayList files={essayFiles} limit={3} isHome={true} />
 
         {/* limited projects list */}
         <h4 style={{ 
-          fontSize: "16px", 
+          fontSize: "12px", 
           textAlign: "left", 
           color: "#111",
-          fontFamily: "times new roman"
         }}>
-          Projects
+          [PROJECTS]
         </h4>
         <ProjectList projlist={limitedProjList} showPage={false}/>
       </div>
