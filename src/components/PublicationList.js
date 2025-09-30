@@ -3,8 +3,6 @@ import React, { useEffect } from "react";
 export function PublicationList({ publist, isHome }) {
     useEffect(() => {
       document.title = "Publications | Ahitagni D";
-  
-      return () => {};
     }, []);
 
     return (
@@ -17,80 +15,52 @@ export function PublicationList({ publist, isHome }) {
           }}>
 
             {publist.map((pubs, item) => (
-              
-              <div key={pubs.title} style={{ 
-                marginBottom: "10px", 
-                display: "flex",
-                gap: "20px",
-                alignItems: "flex-start", 
-                paddingBottom: "10px"
-              }}>
+              <div key={pubs.title}>
+                <div style={{ 
+                  display: "flex",
+                  alignItems: "flex-start",
+                  marginBottom: "5px",
+                  paddingBottom: "8px"
+                }}>
 
-                {/* cover image */}
-                <img 
-                  src={pubs.coverImage} 
-                  alt={pubs.title}
-                  style={{
-                    width: "110px",
-                    aspectRatio: "1/1",
-                    objectFit: "cover",
-                  }}
-                />
+                  <div style={{ 
+                      width: "90%",
+                      paddingRight: "20px"
+                  }}>
+                      <a style={{
+                          textDecoration: "none", 
+                          color: "#666",
+                          fontSize: "16px",
+                          fontWeight: "400",
+                          lineHeight: "1.4",
+                          wordWrap: "break-word"
+                      }} 
+                      href={pubs.paper}>
+                          {pubs.title}
+                      </a>
+                  </div>
 
-                <div>
-                    {/* paper title */}
-                    <h4 style={{ fontSize: "15px", marginBottom: "4px", marginTop: "0px", textAlign: "left"}}>
-                        <a style={{
-                            textDecoration: "none", 
-                            color: "#2d7093"}} 
-                            href={pubs.paper}>
-                                {pubs.title}
-                        </a>
-                    </h4>
-                    
-                    {/* paper github and link */}
-                    <p style={{ color: "#666", fontSize: "14px", margin: "0px", textAlign: "left" }}>
-                        {pubs.github && (
-                            <a style={{
-                                textDecoration: "none",
-                                color: "#2d7093",
-                                marginRight: "4px"
-                            }} 
-                            href={pubs.github}>
-                                [Code]
-                            </a>
-                        )}
-                        {pubs.paper && (
-                            <a style={{
-                                textDecoration: "none",
-                                color: "#2d7093",
-                                marginRight: "4px"
-                            }} 
-                            href={pubs.paper}>
-                                [Paper]
-                            </a>
-                        )}
-                    </p>
+                  <div style={{ 
+                      width: "20%",
+                      color: "#666", 
+                      fontSize: "14px", 
+                      textAlign: "right",
+                      lineHeight: "1.2"
+                  }}>
+                      {pubs.journal}
+                  </div>
 
-                    {/* journal */}
-                    <p style={{ color: "#666", fontSize: "14px", margin: "2px", textAlign: "left", fontStyle: "italic" }}>
-                        {pubs.journal}
-                    </p>
-
-                    {/* authors */}
-                    <p style={{ color: "#666", fontSize: "14px", margin: "0px", textAlign: "left" }}>
-                        {pubs.authors}
-                    </p>
-
-                    {/* description */}
-                    <p style={{ color: "#666", fontSize: "14px", lineHeight: "1.2", textAlign: "left"}}>
-                        {pubs.description}
-                    </p>
                 </div>
+
+                {item < publist.length - 1 && (
+                  <div style={{
+                    borderBottom: "1px dotted #ccc",
+                    marginBottom: "8px"
+                  }}></div>
+                )}
               </div>
             ))}
 
-            {/* show see more publications in home page */}
             {isHome && (
             <div style={{
                 textAlign: "center", 

@@ -65,6 +65,8 @@ function Home() {
           fontSize: "12px", 
           textAlign: "left", 
           color: "#111",
+          paddingTop: "10px",
+          paddingBottom: "10px"
         }}>
           [RESEARCH]
         </h4>
@@ -84,6 +86,8 @@ function Home() {
           fontSize: "12px", 
           textAlign: "left", 
           color: "#111",
+          paddingTop: "10px",
+          paddingBottom: "10px"
         }}>
           [PUBLICATIONS]
         </h4>
@@ -93,6 +97,8 @@ function Home() {
           fontSize: "12px", 
           textAlign: "left", 
           color: "#111",
+          paddingTop: "10px",
+          paddingBottom: "10px"
         }}>
           [PHOTOGRAPHY]
         </h4>
@@ -105,6 +111,8 @@ function Home() {
           fontSize: "12px", 
           textAlign: "left", 
           color: "#111",
+          paddingTop: "10px",
+          paddingBottom: "10px"
         }}>
           [ESSAYS]
         </h4>
@@ -115,6 +123,8 @@ function Home() {
           fontSize: "12px", 
           textAlign: "left", 
           color: "#111",
+          paddingTop: "10px",
+          paddingBottom: "10px"
         }}>
           [PROJECTS]
         </h4>
