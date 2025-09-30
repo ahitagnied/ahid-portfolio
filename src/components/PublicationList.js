@@ -19,7 +19,7 @@ export function PublicationList({ publist, isHome }) {
                 <div style={{ 
                   display: "flex",
                   alignItems: "flex-start",
-                  marginBottom: "5px",
+                  paddingTop: "8px",
                   paddingBottom: "8px"
                 }}>
 
@@ -54,8 +54,7 @@ export function PublicationList({ publist, isHome }) {
 
                 {item < publist.length - 1 && (
                   <div style={{
-                    borderBottom: "1px dotted #ccc",
-                    marginBottom: "8px"
+                    borderBottom: "1px dotted #ccc"
                   }}></div>
                 )}
               </div>
