@@ -53,8 +53,8 @@ function Home() {
     <div style={{ lineHeight: '1.2', fontSize: '16px', fontFamily: 'Lora' }}>
         <img src={profile} style={{width: 'max(30%, 145px)', aspectRatio: '1', borderRadius: '50%', marginTop: '20px', marginBottom: '20px', display: 'block', marginLeft: 'auto', marginRight: 'auto'}} alt="Banner" />
         <p>
-          I am Ahi, a junior at <Link href='https://www.rice.edu/'>Rice University</Link> studying EECS. I am interested in foundational models in Vision & Robotics.
-          I am a part of <Link href='https://neo.com/'>Neo</Link>, love building start-ups, hiking, and sailing. 
+          Junior at <Link href='https://www.rice.edu/'>Rice</Link> studying EECS. I am interested in foundational models in Vision and explore consumer AI using vision and audio.
+          I am a part of <Link href='https://neo.com/'>Neo</Link>, and scout for <Link href='https://clayvc.io'>Clay VC</Link> [<Link href='https://calendly.com/ahitagnid/new-meeting'>connect</Link>]. 
         </p>
 
 
@@ -72,13 +72,15 @@ function Home() {
         </h4>
 
         <p>
-          I research Video Understanding at <Link href='https://www.sievedata.com/'>Sieve</Link> to curate and scale high-fidelity video datasets for companies like <Link href='https://www.moonvalley.com/'>MoonValley</Link>. 
-          I also research Gaussian Splatting at the <Link href='https://computationalimaging.rice.edu/'>Computational Imaging Group</Link> with <Link href='https://scholar.google.com/citations?user=tI-oUmsAAAAJ&hl=en'> Dr. Ashok Veeraraghavan</Link>. 
-          
+          I am interested in using vision to represent and interact with reality. My interests include but are not limited to 3D Neural Representations, World Models, & VLAs.
+
           <br/><br/>
 
-          Previously, I have developed Colloidal Robotics at the <Link href='https://www.media.mit.edu/groups/nano-cybernetic-biotrek/overview/'>MIT Media Lab</Link>, researched Li/Na-ion batteries at 
-          the <Link href='https://ajayan.rice.edu/'>Ajayan Group</Link>, and energy devices at <Link href='https://scholar.google.com/citations?user=JlmilbMAAAAJ&hl=en'>IIT Guwahati.</Link>
+          Currently, I research Video Understanding at <Link href='https://www.sievedata.com/'>Sieve</Link> to curate video datasets for top AI labs and explore Gaussian Splatting at the <Link href='https://computationalimaging.rice.edu/'>Computational Imaging Group</Link> with <Link href='https://scholar.google.com/citations?user=tI-oUmsAAAAJ&hl=en'> Dr. Ashok Veeraraghavan</Link>
+
+          <br/><br/>
+
+          Previously, I worked on Colloidal Robotics at the <Link href='https://www.media.mit.edu/groups/nano-cybernetic-biotrek/overview/'>MIT Media Lab</Link>, researched Li/Na-ion batteries at the <Link href='https://ajayan.rice.edu/'>Ajayan Group</Link>, and energy devices at <Link href='https://scholar.google.com/citations?user=JlmilbMAAAAJ&hl=en'>IIT Guwahati.</Link>
         </p>
 
         {/* limited publication list */}
