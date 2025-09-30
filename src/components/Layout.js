@@ -14,7 +14,7 @@ function Layout({ children }) {
       
       <main style={{ 
         flex: 1, 
-        padding: '20px',
+        padding: '20px 15px',
         marginTop: '20px', 
         maxWidth: '100%',
         width: '100%',

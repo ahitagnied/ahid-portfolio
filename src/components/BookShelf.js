@@ -152,7 +152,6 @@ export function Bookshelf({ books }) {
           <div style={{ 
             display: "flex", 
             gap: "10px",
-            padding: "0 40px",
           }}>
             {books.map((book, index) => (
               <button
@@ -310,7 +309,6 @@ export function Bookshelf({ books }) {
         marginTop: "30px",
         maxWidth: "500px",
         margin: "50px auto 0",
-        padding: "0 10px",
         fontFamily: "times new roman",
       }}>
         <h2 style={{ fontSize: "18px", marginBottom: "10px", color: "#444"}}> {selectedBook.title} </h2>
@@ -338,7 +336,6 @@ export function Bookshelf({ books }) {
         marginTop: "30px",
         maxWidth: "650px",
         margin: "50px auto 0",
-        padding: "0 20px",
         fontFamily: "times new roman",
       }}>
         {books.map((book) => (

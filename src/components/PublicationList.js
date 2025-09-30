@@ -9,8 +9,7 @@ export function PublicationList({ publist, isHome }) {
         <div style={{
             marginTop: isHome ? "10px" : "30px",
             maxWidth: "650px",
-            margin: isHome ? "0" : "50px auto 0",
-            padding: isHome ? "0" : "0 20px",
+            margin: isHome ? "0" : "20px auto 0px",
             fontFamily: "Lora",
           }}>
 
