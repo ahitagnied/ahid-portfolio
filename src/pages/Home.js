@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Contact from "../components/Contact";
-import { data } from '../contents/ContactData';
+// import Contact from "../components/Contact";
+// import { data } from '../contents/ContactData';
 import { publist } from '../contents/PublicationList'
 import { PublicationList } from '../components/PublicationList';
 import { ProjectList } from '../components/ProjectList';
