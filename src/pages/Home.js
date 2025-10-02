@@ -127,7 +127,7 @@ function Home() {
 
           <br/><br/>
 
-          Currently, I research Video Understanding at <Link href='https://www.sievedata.com/' color='#7c3aed'>Sieve</Link> to curate video datasets for top AI labs.
+          I am a research engineer working on Continual Learning at <Link href='https://personainc.ai/' color='#00BFFF'>Persona AI</Link>. Previously, I worked on Video Understanding at <Link href='https://www.sievedata.com/' color='#7c3aed'>Sieve</Link> to curate video datasets for top AI labs.
         </p>
 
         {/* Contact and Teams Box*/}

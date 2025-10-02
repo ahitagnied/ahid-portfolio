@@ -4,13 +4,13 @@ import lotusLogo from '../assets/stealth.png';
 import personaLogo from '../assets/persona.png';
 
 export const worklist = [
-    // {
-    //     name: "Persona AI",
-    //     position: "Research Engineer",
-    //     year: "2025",
-    //     logo: personaLogo,
-    //     link: "http://personainc.ai/",
-    // },
+    {
+        name: "Persona AI",
+        position: "Research Engineer",
+        year: "2025",
+        logo: personaLogo,
+        link: "http://personainc.ai/",
+    },
     {
         name: "Sieve",
         position: "Applied ML",
