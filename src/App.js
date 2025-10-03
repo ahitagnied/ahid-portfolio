@@ -1,6 +1,5 @@
-// src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Reading from './pages/Reading';
@@ -9,9 +8,28 @@ import Publications from './pages/Publications';
 import Essays from './pages/Essays';
 import './App.css';
 
+function ScrollToTopOnRouteChange() {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
+  return null;
+}
+
 function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
+
   return (
     <Router>
+      <ScrollToTopOnRouteChange />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
