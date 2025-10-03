@@ -12,7 +12,7 @@ export function ProjectList({ projlist, showPage }) {
             marginTop: "10px",
             maxWidth: "650px",
             margin: "0",
-            fontFamily: "times new roman",
+            fontFamily: "Lora",
           }}>
 
             <div style={{

@@ -15,7 +15,7 @@ function Layout({ children }) {
       <main style={{ 
         flex: 1, 
         padding: '20px 15px',
-        marginTop: '20px', 
+        paddingTop: '90px', 
         maxWidth: '100%',
         width: '100%',
         boxSizing: 'border-box', 

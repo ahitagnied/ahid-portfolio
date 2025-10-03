@@ -309,7 +309,7 @@ export function Bookshelf({ books }) {
         marginTop: "30px",
         maxWidth: "500px",
         margin: "50px auto 0",
-        fontFamily: "times new roman",
+        fontFamily: "Lora",
       }}>
         <h2 style={{ fontSize: "18px", marginBottom: "10px", color: "#444"}}> {selectedBook.title} </h2>
         
@@ -333,10 +333,10 @@ export function Bookshelf({ books }) {
       </div>
     ) : (
       <div style={{
-        marginTop: "30px",
+        marginTop: "0px",
         maxWidth: "650px",
-        margin: "50px auto 0",
-        fontFamily: "times new roman",
+        margin: "0 auto",
+        fontFamily: "Lora",
       }}>
         {books.map((book) => (
           <div key={book.title} style={{ 
@@ -373,7 +373,7 @@ export function Bookshelf({ books }) {
                 </p>
               )}
               
-              <p style={{ lineHeight: "1.4", textAlign: "left", color: "#666", fontSize: "17px" }}>
+              <p style={{ lineHeight: "1.4", textAlign: "left", color: "#666", fontSize: "16px" }}>
                 {book.description}
               </p>
             </div>
@@ -386,7 +386,7 @@ export function Bookshelf({ books }) {
           textAlign: "center",
           fontSize: "14px",
           color: "#666",
-          fontFamily: "Arial, sans-serif",
+          fontFamily: "Lora",
         }}>
           Inspired by <a href="https://adammaj.com/reading" style={{textDecoration: "none", color: "black"}}>adam-maj</a>
         </p>

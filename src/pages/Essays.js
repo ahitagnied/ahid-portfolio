@@ -102,7 +102,7 @@ function Essays() {
 
   if (essay) {
     return (
-      <div style={{ maxWidth: "650px", margin: "30px auto 0", padding: "0", fontFamily: "Lora" }}>
+      <div style={{ maxWidth: "650px", margin: "0 auto", fontFamily: "Lora" }}>
         <style>
         {`
           .footnotes > h2:first-child { display: none; }
@@ -154,7 +154,7 @@ function Essays() {
   }
 
   return (
-    <div style={{ maxWidth: "650px", margin: "30px auto 0", padding: "0px", fontFamily: "Lora" }}>
+    <div style={{ maxWidth: "650px", margin: "0 auto", fontFamily: "Lora" }}>
       <EssayList files={manifestFiles} limit={null} isHome={false}/>
     </div>
   );

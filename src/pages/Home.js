@@ -72,7 +72,6 @@ function Home() {
     <div style={{
       maxWidth: '650px',
       margin: '0 auto',
-      paddingTop: '30px',
     }}>
       
     <div style={{ lineHeight: '1.2', fontSize: '16px', fontFamily: 'Lora' }}>
