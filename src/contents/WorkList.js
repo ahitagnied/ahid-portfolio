@@ -1,7 +1,7 @@
 import sieveLogo from '../assets/sieve.png';
 import mitLogo from '../assets/mit.avif';
 import lotusLogo from '../assets/stealth.png';
-import personaLogo from '../assets/persona.png';
+import personaLogo from '../assets/persona.jpg';
 
 export const worklist = [
     {
