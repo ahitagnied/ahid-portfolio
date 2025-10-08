@@ -1,5 +1,30 @@
 export const books = [
   {
+    title: "Man's Search for Meaning",
+    slug: "man's-search-for-meaning",
+    spineColor: "#b1a0bd",
+    textColor: "#255054",
+    coverImage: "https://m.media-amazon.com/images/I/71tdb1udZnL._SL1500_.jpg",
+    author: "Viktor E. Frankl",
+    read: "August 20, 2025",
+    rating: "9/10",
+    description: (
+      <>
+        <p>Frankl argues that meaning emerges not from pleasure or power, but from how we respond to unavoidable suffering. Writing from Auschwitz, he observes that those who survived had something to live for—a task, a person, a future worth enduring hell for. The insight cuts through therapeutic abstractions: meaning isn't found, it's chosen.</p>
+
+        <p>What strikes me most is his refusal to romanticize trauma. Suffering doesn't automatically create meaning—only our response to it does. This reframes every setback as a choice point: will this break me or reveal what I'm capable of? The book became my compass during difficult periods, not because it promises easy answers, but because it insists we always retain the freedom to choose our stance.</p>
+
+        <p>---</p>
+
+        <p>"Everything can be taken from a man but one thing: the last of the human freedoms—to choose one's attitude in any given set of circumstances, to choose one's own way."</p>
+
+        <p>"Those who have a 'why' to live, can bear with almost any 'how'."</p>
+
+        <p>"When we are no longer able to change a situation, we are challenged to change ourselves."</p>
+      </>
+    )
+  },
+  {
     title: "On Intelligence",
     slug: "on-intelligence",
     spineColor: "#11599C",
@@ -11,16 +36,15 @@ export const books = [
     description: (
       <>
         <p>
-          Hawkins strives toward a singular, all-encompassing theory of intelligence centered on the neocortex, which he claims is a memory and prediction system running one algorithm that is hierarchical, sparse, and sequence-centric, replicated everywhere. The book is a unifying lens. Once you adopt it, perception, action, and “understanding” reduce to modeling the world and predicting what comes next.
+          Hawkins argues intelligence is prediction, not pattern matching. The neocortex runs one hierarchical, sparse algorithm everywhere—modeling sequences, anticipating next steps, correcting errors. This theory unifies perception, action, and understanding under a single framework: building and maintaining a temporal world model.
         </p>
 
         <p>
-          The value here is the bridge. He reads the neocortex as a working spec and asks ML to honor its rules: time, hierarchy, feedback, sparsity, continual learning.
-          On ML and AGI, the take is clear. Scaling pattern matchers is not the same as building a cortex. We need architectures that learn <i>temporal</i> structure, use top-down prediction as a core signal, represent knowledge sparsely and compositionally, and learn continuously without labels. Even if modern LLMs blunt some of his 2004 criticisms, the framework raises the bar for intelligence: not just fitting distributions, but maintaining a world model that anticipates and corrects itself in real time.
+          The challenge to modern ML is direct. Scaling transformers isn't the same as building a cortex. Real intelligence requires temporal structure, top-down prediction, sparse composition, and continual learning—not labeled datasets and static distributions. Even as LLMs improve, the gap remains: they fit patterns, not maintain models that self-correct in real time.
         </p>
 
         <p>
-          The arguments are light on proofs and sometimes hand-wavy on implementation. Still, I would rather have a sharp theory that orients my engineering than a bag of heuristics with no north star. This book offers that orientation, a single theory of intelligence that is specific enough to disagree with and practical enough to guide design.
+          The arguments lack formal rigor and implementation detail, but that's acceptable. A sharp theory that directs inquiry beats scattered heuristics. This provides orientation—specific enough to test, practical enough to build from.
         </p>
       </>
     )
@@ -36,11 +60,9 @@ export const books = [
     rating: "8.7/10",
     description: (
       <>
-        <p>Ikigai reframes the familiar “follow your passion” mantra into a living practice, rooted in Okinawan longevity and small town rhythms. It’s not a panacea or a productivity hack, but a gentle invitation to tune into what makes each morning worth waking up for.</p>
+        <p>Ikigai locates purpose not in grand callings but in daily rituals—tea with neighbors, morning walks, communal dance. Garcia and Miralles study Okinawan centenarian to show how meaning emerges from consistency, not ambition. Purpose becomes social, not heroic.</p>
 
-        <p>I liked the way Garcia and Miralles peel back ikigai’s cultural layers: tea gatherings, neighborhood dance circles, morning walks, showing how small rituals weave purpose into daily life. These vignettes aren’t glossy success stories, they’re snapshots of real people finding meaning in the mundane. Purpose here isn’t a solitary Everest to conquer but a communal flame to share.</p>
-        
-        <p>That said, the book sometimes drifts into platitudes. “Move toward what excites you” feels obvious without deeper tactics. I’d have liked a tougher edge, exercises that force you beyond reflection into action. Still, Ikigai’s quiet wisdom lives in its patience. It won’t yell at you to hustle harder, but it will remind you why a steady ember beats a wildfire.</p>
+        <p>The book's weakness is its reluctance to prescribe. "Follow what excites you" is true but insufficient without mechanisms. It describes the state but not the path. Still, the reframing matters: purpose as ember rather than explosion, maintained through small acts rather than singular breakthroughs.</p>
       </>
     )
   },
@@ -55,9 +77,7 @@ export const books = [
     rating: "5/10",
     description: (
       <>
-        <p>What begins as a promising survey of 12th-century Japanese disasters—fires, famines, plagues—quickly devolves into a disappointingly shallow memoir.</p> 
-        
-        <p>I slogged through half the text expecting substantive Buddhist teachings, only to find the centerpiece is a bare-bones recounting of Chōmei’s move into a hut. There’s virtually no exploration of what solitude means or how it shapes the mind—just terse observations that feel half-baked. At barely 2,000 words, it’s over before it begins, leaving me frustrated rather than enlightened. If you want genuine insight into Buddhist philosophy or the hermit’s path, look elsewhere.</p>
+        <p>Chōmei catalogs 12th-century disasters—fires, famines, earthquakes—then retreats to a hut. The disasters are vivid but serve only as preamble. The hut life, which should be the core, offers no meditation on solitude or its effects on consciousness. At 2,000 words, it gestures toward impermanence without developing the thought. If you want Buddhist philosophy or hermit wisdom, this isn't it.</p>
       </>
     )
   },
@@ -72,13 +92,9 @@ export const books = [
     rating: "9/10",
     description: (
       <>
-        <p>Seierstad delivers a rigorously reported, deeply nuanced portrait of post-Taliban Kabul through the lens of Sultan Khan's family and bookshop.</p>
-        
-        <p>Her reporting—grounded in immersive, on-site observation—illuminates both the city's sensory textures (the aroma of newly printed volumes, the cadence of evening prayers) and the complex dynamics within Khan's household.</p>
-        
-        <p>I found the interweaving of political context and personal narrative particularly effective: daughters' acts of quiet defiance and Khan's internal struggle embody Afghanistan's broader social transformation.</p>
-        
-        <p>The prose is precise and unembellished, ensuring that each detail advances understanding rather than ornamentation. This book stands out as a model of narrative journalism—compelling, empathetic, and essential for anyone seeking a substantive account of contemporary Afghan life.</p>
+        <p>Seierstad embeds with Sultan Khan's family to map post-Taliban Kabul. The strength is specificity: how daughters resist within constraints, how Khan reconciles old loyalties with new freedoms, how a bookshop becomes contested ground between tradition and change. The personal renders the political legible—Afghanistan's transformation visible in one household's tensions.</p>
+
+        <p>The prose stays spare. Details accumulate without ornament, building understanding through accretion. Strong narrative journalism—empathetic but unsentimental.</p>
       </>
     )
   },
@@ -93,11 +109,17 @@ export const books = [
     rating: "8.5/10",
     description: (
       <>
-        <p>“The cowards never started,” he’d tell me, “and the weak died along the way—that leaves us.”</p>
+        <p>Knight's memoir strips away the myth of Nike's inevitability. What emerges is contingency: cash flow crises, supplier betrayals, lawsuits, near-death moments. The company survives not through vision but through stubborn endurance and improvisation. The lesson isn't about passion or purpose—it's about continuing when stopping seems rational.</p>
 
-        <p>"Every runner knows this. You run and run, mile after mile, and you never quite know why. You tell yourself that you’re running toward some goal, chasing some rush, but really you run because the alternative, stopping, scares you to death."</p>
+        <p>His management philosophy is anti-bureaucratic: set direction, then get out of the way. Trust people to solve problems you didn't anticipate. The book's power is in its honesty about fear, failure, and the randomness of success.</p>
+        
+        <p>---</p>
+        
+        <p>"The cowards never started, and the weak died along the way—that leaves us."</p>
 
-        <p>"Don’t tell people how to do things, tell them what to do and let them surprise you with their results."</p>
+        <p>"Every runner knows this. You run and run, mile after mile, and you never quite know why. You tell yourself that you're running toward some goal, chasing some rush, but really you run because the alternative, stopping, scares you to death."</p>
+
+        <p>"Don't tell people how to do things, tell them what to do and let them surprise you with their results."</p>
 
         <p>"There were many ways down Mount Fuji, according to my guidebook, but only one way up. Life lesson in that, I thought."</p>
       </>
@@ -114,15 +136,17 @@ export const books = [
     rating: "7/10",
     description: (
       <>
-        <p>Coelho’s allegorical journey is beautifully rendered, with Santiago’s quest through deserts and omens resonating as a universal metaphor for purpose. The prose is clear and often lyrical, lending depth to themes of destiny and self-discovery. Yet I found the conclusion unexpectedly understated: instead of a transcendent climax, Santiago unearths his treasure at home, leaving a sense of abrupt finality. While the novel’s core message—that the real journey lies within—remains powerful, the ending felt too succinct, as if the promise of something grander was left unrealized.</p>
+        <p>Santiago pursues omens across deserts only to find his treasure buried where he started. The allegory is transparent: searching reveals what was always present. Coelho's prose is simple and lyrical, effective for parable. The disappointment is structural—the ending arrives abruptly, deflating the journey's momentum. The idea works better than the execution.</p>
+        
+        <p>---</p>
+        
+        <p>"It's this: that at a certain point in our lives, we lose control of what's happening to us, and our lives become controlled by fate. That's the world's greatest lie."</p>
 
-        <p>“It’s this: that at a certain point in our lives, we lose control of what’s happening to us, and our lives become controlled by fate. That’s the world’s greatest lie.”</p>
-
-        <p>“Because I don’t live in either my past or my future. I’m interested only in the present. If you can concentrate always on the present, you’ll be a happy man."</p>
+        <p>"Because I don't live in either my past or my future. I'm interested only in the present. If you can concentrate always on the present, you'll be a happy man."</p>
 
         <p>"The dunes are changed by the wind, but the desert never changes."</p>
 
-        <p>“It’s not what enters men’s mouths that’s evil,” said the alchemist. “It’s what comes out of their mouths that is.”</p>
+        <p>"It's not what enters men's mouths that's evil," said the alchemist. "It's what comes out of their mouths that is."</p>
 
         <p>"Most people see the world as a threatening place, and, because they do, the world turns out, indeed, to be a threatening place."</p>
       </>
@@ -139,7 +163,7 @@ export const books = [
     rating: "8/10",
     description: (
       <>
-        <p>Gibran’s collection of poetic essays delivers timeless insights on love, work, and freedom with a simplicity that feels both spiritual and accessible. Each chapter reads like a standalone meditation—rich in metaphor and quietly profound—allowing readers to pause and reflect. Yet the very fragmentary structure, while beautiful, can feel disjointed, and the final poem offers wisdom without a true sense of closure. I appreciated its lyrical depth, but the abrupt ending left me yearning for a more cohesive resolution.</p>
+        <p>Gibran offers poetic meditations on love, work, freedom—each chapter self-contained, metaphor-dense, accessible. The fragmentary structure suits contemplation but resists cohesion. No argument develops; wisdom accumulates without resolution. The lyrical depth compensates somewhat, but the lack of progression or closure limits its impact.</p>
       </>
     )
   },
@@ -154,11 +178,12 @@ export const books = [
     rating: "6.5/10",
     description: (
       <>
-        <p>This seven-story collection examines male solitude and the echoes of loss with Murakami’s signature blend of subtle surrealism and emotional clarity. From the widowed surgeon in “Drive My Car” to the reserved bartender in “Scheherazade,” each protagonist navigates absence through memory and silence. The prose is spare yet evocative, drawing readers into quietly resonant inner worlds. A concise, insightful exploration of masculinity and isolation.</p>
+        <p>Seven stories of men navigating absence—widowed surgeons, reserved bartenders, all processing loss through memory and silence. Murakami's surrealism stays subtle; the emotional landscape precise. Each protagonist confronts the impossibility of return: places, people, selves all shift imperceptibly. The prose is spare, the affect subdued. Strong on mood, light on event.</p>
 
-        <p>“Whether you want to or not. But the place you return to is always slightly different from the place you left. That’s the rule. It can never be exactly the same.”</p>
-
-        <p>“[] Can any of us ever perfectly understand another person? However much we may love them?”</p>
+        
+        <p>---</p>
+        
+        <p>"Whether you want to or not. But the place you return to is always slightly different from the place you left. That's the rule. It can never be exactly the same."</p>
       </>
     )
   },
@@ -173,7 +198,7 @@ export const books = [
     rating: "9/10",
     description: (
       <>
-        <p>Tartt’s novel excels at conjuring an intoxicating academic world—its precise descriptions of classical rituals and ivy-clad seclusion drew me in immediately. The slow-burn build-up of tension, punctuated by that infamous winter kill, showcases her talent for psychological suspense. Yet I found the prose occasionally overindulgent: lengthy introspection and ornate detail sometimes stalled the narrative momentum. While the characters’ moral unraveling is compelling, a leaner edit would have sharpened the impact. Still, its dark-academia allure and thematic depth make it a memorable, if imperfect, exploration of obsession and guilt.</p>
+        <p>Tartt builds an insular academic world—Greek rituals, Vermont winters, a tight circle of students who commit murder. The atmosphere is thick, the psychological suspense real. The weakness is indulgence: ornate prose, long introspections, details that slow momentum. The moral unraveling is compelling but could be sharper. Still, the obsession and guilt land. Dark academia as a study in how isolation breeds extremity.</p>
       </>
     )
   },
@@ -188,7 +213,7 @@ export const books = [
     rating: "5/10",
     description: (
       <>
-        <p>The novel’s central conceit—losing one day of your life each time a cat vanishes—has genuine emotional potential, but the execution feels unpolished. The prose reads like a rough draft, with awkward turns of phrase and simplistic dialogue that at times felt childlike rather than contemplative. That said, it’s a brisk, under-200-page read, and a few chapters capture moments of genuine tenderness between owner and pet. Ultimately, though, its themes of regret and redemption remain underdeveloped, and I was left wishing for deeper character arcs and sharper writing. A light, quick read—but not one I’ll revisit.</p>
+        <p>Each time something disappears from the world, the protagonist gains a day of life. The conceit has potential—what would you sacrifice for time?—but the execution is unpolished. The prose feels rushed, dialogue simplistic, themes underdeveloped. A few moments of tenderness between owner and cat work, but regret and redemption never deepen. Quick, under 200 pages, forgettable.</p>
       </>
     )
   },
