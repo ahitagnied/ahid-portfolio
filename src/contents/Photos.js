@@ -8,12 +8,12 @@ export const photos = [
       location: "San Lucas, Mexico",
     },
     {
-      filename: "lands-end.jpg",
-      location: "Lands End, San Francisco",
+      filename: "terlingua.jpg",
+      location: "Terlingua, Texas",
     },
     {
-      filename: "alaska.jpg",
-      location: "Denali, Alaska",
+      filename: "yosemite.jpg",
+      location: "Yosemite, California",
     },
     {
       filename: "todos-santos.jpg",
