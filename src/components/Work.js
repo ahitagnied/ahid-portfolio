@@ -23,15 +23,14 @@ export function Work({ worklist }) {
                     display: "flex",
                     alignItems: "center",
                     marginBottom: "3px",
-                    paddingBottom: "5px",
-                    padding: "4px"
+                    padding: "3px 3px"
                   }}>
 
                     {/* Logo */}
                     <div style={{ 
                         width: "24px",
                         height: "24px",
-                        marginRight: "12px",
+                        marginRight: "10px",
                         flexShrink: 0
                     }}>
                         <img 
