@@ -82,7 +82,7 @@ function Home() {
         gridTemplateColumns: '1fr auto',
         gap: '4px 20px',
         marginBottom: '20px',
-        paddingBottom: '20px',
+        paddingBottom: '10px',
         alignItems: 'center'
       }}>
         {/* Row 1 */}
@@ -140,7 +140,6 @@ function Home() {
           textAlign: "left", 
           color: "#111",
           paddingTop: "10px",
-          paddingBottom: "10px"
         }}>
           [RESEARCH]
         </h4>
@@ -151,8 +150,6 @@ function Home() {
           <br/><br/>
 
           Previously, I worked on Colloidal Robotics at the <Link href='https://www.media.mit.edu/groups/nano-cybernetic-biotrek/overview/' color='#8a0000'>MIT Media Lab</Link>, researched Li/Na-ion batteries at the <Link href='https://ajayan.rice.edu/' underline={false}>Ajayan Group</Link>, and energy devices at <Link href='https://scholar.google.com/citations?user=JlmilbMAAAAJ&hl=en' color='#ff6b35'>IIT Guwahati.</Link>
-
-          <br/><br/>
         </p>
         
         <PublicationList publist={limitedPubList} isHome={true}/>
@@ -162,7 +159,6 @@ function Home() {
           textAlign: "left", 
           color: "#111",
           paddingTop: "10px",
-          paddingBottom: "10px"
         }}>
           [PHOTOGRAPHY]
         </h4>
@@ -176,7 +172,6 @@ function Home() {
           textAlign: "left", 
           color: "#111",
           paddingTop: "10px",
-          paddingBottom: "10px"
         }}>
           [ESSAYS]
         </h4>
@@ -187,7 +182,6 @@ function Home() {
           textAlign: "left", 
           color: "#111",
           paddingTop: "10px",
-          paddingBottom: "10px"
         }}>
           [PROJECTS]
         </h4>
