@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkMath from 'remark-math';
 import remarkFootnotes from 'remark-footnotes';
 import rehypeKatex from 'rehype-katex';
+import rehypeRaw from 'rehype-raw';
 import 'katex/dist/katex.min.css';
 import { EssayList } from '../components/EssayList';
 
@@ -140,10 +141,10 @@ function Essays() {
         {loading ? (
           <p>Loading...</p>
         ) : (
-          <div style={{ lineHeight: "1.2", fontSize: "16px", color: "#333" }}>
+          <div className="essay-content" style={{ lineHeight: "1.2", fontSize: "16px", color: "#333" }}>
             <ReactMarkdown 
               remarkPlugins={[remarkMath, remarkFootnotes]}
-              rehypePlugins={[rehypeKatex]}
+              rehypePlugins={[rehypeKatex, rehypeRaw]}
             >
               {essayContent}
             </ReactMarkdown>

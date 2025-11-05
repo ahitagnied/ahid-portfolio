@@ -59,7 +59,7 @@ export const EssayList = ({ files, limit, isHome = false}) => {
   return (
     <div>
       {displayEssays.map((essay, i) => (
-        <div key={essay.slug}>
+        <div key={essay.slug} style={{ marginBottom: "10px" }}>
           <Link to={`/essays/${essay.slug}`} style={{ 
             textDecoration: "none", 
             color: "inherit", 
