@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import Contact from "../components/Contact";
 // import { data } from '../contents/ContactData';
+import profile from '../assets/profile.jpg';
 import { publist } from '../contents/PublicationList'
 import { PublicationList } from '../components/PublicationList';
 import { ProjectList } from '../components/ProjectList';
@@ -74,6 +75,19 @@ function Home() {
       margin: '0 auto',
     }}>
       
+    <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+      <img 
+        src={profile} 
+        alt="Profile" 
+        style={{
+          width: '150px',
+          height: '150px',
+          borderRadius: '50%',
+          objectFit: 'cover'
+        }}
+      />
+    </div>
+
     <div style={{ lineHeight: '1.2', fontSize: '16px', fontFamily: 'Lora' }}>
       
       {/* Three row grid */}
@@ -102,7 +116,7 @@ function Home() {
           fontSize: '16px',
           color: '#666'
         }}>
-          Vision & Robotics Engineer
+          Researcher / Engineer
         </div>
         <div style={{ textAlign: 'right', fontSize: '14px' }}>
           <Link href='https://x.com/ahitagnied' color='#1da1f2' underline={true}>Twitter</Link>
