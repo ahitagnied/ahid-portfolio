@@ -75,13 +75,13 @@ function Home() {
       margin: '0 auto',
     }}>
       
-    <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+    <div style={{ textAlign: 'center', marginBottom: '10px' }}>
       <img 
         src={profile} 
         alt="Profile" 
         style={{
-          width: '150px',
-          height: '150px',
+          width: 'max(25%, 130px)',
+          aspectRatio: '1',
           borderRadius: '50%',
           objectFit: 'cover'
         }}
