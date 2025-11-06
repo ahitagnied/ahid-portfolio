@@ -12,7 +12,7 @@ date: Nov 2025
 
 This is a collection of articles, blogs, and pages I keep coming back to. Most are tutorials or curated lists of other great reads.
 
-I figured it’s easier to keep them all in one place - both for myself and anyone else who might find them useful - rather than juggling 1729 open tabs. This a small attempt at organizing a corner of the internet I love.
+I figured it’s easier to keep them all in one place - both for myself and anyone else who might find them useful - rather than juggling a thousand open tabs. This a small attempt at organizing a corner of the internet I love.
 
 Maintained since November 5, 2025. 
 
@@ -22,10 +22,11 @@ Maintained since November 5, 2025.
 
 - [Neural network training makes beautiful fractals](https://sohl-dickstein.github.io/2024/02/12/fractal.html)
 
-*Tutorials I found useful over the years*
+*Tutorials*
 
 - [Diffusion Models for Video Understandong](https://lilianweng.github.io/posts/2024-04-12-diffusion-video/)
 - [Getting started with ROS2](https://ben.bolte.cc/posts/2022-11-07-ros)
+- [Model GPU Glossary](https://modal.com/gpu-glossary/perf)
 
 *Cool Archives*
 
