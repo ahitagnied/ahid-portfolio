@@ -51,6 +51,7 @@ function Home() {
   const limitedPubList = publist.slice(0, 3);
   const limitedProjList = projlist.slice(0, 4);
   const limitedWorkList = worklist.slice(0, 5);
+  const limitedPhotos = photos.slice(0, 5);
   const [essayFiles, setEssayFiles] = useState([]);
 
   useEffect(() => {
@@ -179,7 +180,7 @@ function Home() {
         <p>
           Like pixels of all kinds. Most pictures using a PowerShot A540, sometimes a Nikon D5600.
         </p>
-        <PhotoGallery photos={photos} />
+        <PhotoGallery photos={limitedPhotos} />
 
         <h4 style={{ 
           fontSize: "12px", 

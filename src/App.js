@@ -6,6 +6,7 @@ import Reading from './pages/Reading';
 import Publications from './pages/Publications';
 // import Projects from './pages/Projects';
 import Essays from './pages/Essays';
+import Photography from './pages/Photography';
 import './App.css';
 
 function ScrollToTopOnRouteChange() {
@@ -38,6 +39,7 @@ function App() {
           {/* <Route path="/projects" element={<Projects />} /> */}
           <Route path="/essays" element={<Essays />} />
           <Route path="/essays/:slug" element={<Essays />} />
+          <Route path="/photos" element={<Photography />} />
         </Routes>
       </Layout>
     </Router>
