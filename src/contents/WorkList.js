@@ -1,12 +1,12 @@
 import sieveLogo from '../assets/sieve.png';
-import mitLogo from '../assets/mit.avif';
+import mitLogo from '../assets/mit.jpg';
 import lotusLogo from '../assets/stealth.png';
 import personaLogo from '../assets/persona.jpg';
 
 export const worklist = [
     {
         name: "Persona AI",
-        position: "Research Engineer",
+        position: "ML Engineer",
         year: "2025",
         logo: personaLogo,
         link: "http://personainc.ai/",

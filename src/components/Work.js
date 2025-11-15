@@ -60,7 +60,7 @@ export function Work({ worklist }) {
                     {/* Position */}
                     <div style={{
                         color: "#666",
-                        fontSize: "14px",
+                        fontSize: "15px",
                         fontWeight: "400",
                         lineHeight: "1.2",
                         flex: "1"
